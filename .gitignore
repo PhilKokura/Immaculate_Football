@@ -33,3 +33,5 @@ next-env.d.ts
 *.zip
 
 scripts/provider-evaluation/api-football-trophies/.local/
+
+scripts/provider-evaluation/wikidata/.local/

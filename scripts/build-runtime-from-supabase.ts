@@ -1,4 +1,4 @@
-﻿import fs from "node:fs"
+import fs from "node:fs"
 import path from "node:path"
 import { createClient } from "@supabase/supabase-js"
 import type { GameCriterion, PlayerWithImage } from "../components/data/gameData"
@@ -116,9 +116,9 @@ async function main() {
     currentClubRows,
     clubLeagueMemberships,
   ] = await Promise.all([
-    fetchAll<{ id: string; runtime_key: string; name: string; search_names: string[] | null; birth_date: string | null; nationality: string | null; image_url: string | null; active: boolean }>(
+    fetchAll<{ id: string; runtime_key: string; name: string; display_name: string | null; search_names: string[] | null; birth_date: string | null; nationality: string | null; image_url: string | null; active: boolean }>(
       "players",
-      "id,runtime_key,name,search_names,birth_date,nationality,image_url,active",
+      "id,runtime_key,name,display_name,search_names,birth_date,nationality,image_url,active",
     ),
 
     fetchAll<{ player_id: string; provider: string; external_id: string }>(
@@ -272,10 +272,15 @@ async function main() {
         */
         externalId,
 
-        name: player.name,
+        name:
+          player.display_name ?? player.name,
 
         searchNames:
-          player.search_names ?? [],
+          [...new Set([
+            player.name,
+            ...(player.display_name ? [player.display_name] : []),
+            ...(player.search_names ?? []),
+          ])],
 
         birthDate:
           player.birth_date ?? null,
