@@ -1,7 +1,8 @@
 ﻿import fs from "node:fs"
 import path from "node:path"
 import { createClient } from "@supabase/supabase-js"
-import type { GameCriterion, PlayerWithImage, PositionCode } from "../components/data/gameData"
+import type { GameCriterion, PlayerWithImage } from "../components/data/gameData"
+import { buildPlayerPositionMap, countPositionSupport, requirePlayerPositions, POSITION_ORDER, type CanonicalPlayerPositionRow } from "./runtime-player-positions"
 import { canonicalizeRuntimeNation, createNationFlagResolver } from "./provider-evaluation/api-football/runtime-nations"
 import { currentLeagueKeys, type ClubLeagueMembership } from "./club-league-memberships"
 
@@ -46,7 +47,7 @@ const nationFlag = createNationFlagResolver(countriesEnvelope.response)
 async function fetchAll<T>(
   table: string,
   columns: string,
-  options: { currentOnly?: boolean; orderBy?: string } = {},
+  options: { currentOnly?: boolean; orderBy?: string | readonly string[] } = {},
 ): Promise<T[]> {
   const result: T[] = []
   const pageSize = 1000
@@ -55,7 +56,9 @@ async function fetchAll<T>(
     let query = supabase.from(table).select(columns)
       .range(from, from + pageSize - 1)
     if (options.currentOnly) query = query.eq("is_current", true)
-    if (options.orderBy) query = query.order(options.orderBy)
+    for (const column of typeof options.orderBy === "string" ? [options.orderBy] : options.orderBy ?? []) {
+      query = query.order(column)
+    }
     const { data, error } = await query
 
     if (error) {
@@ -102,6 +105,7 @@ async function main() {
   const [
     players,
     playerExternalIds,
+    playerPositions,
     clubs,
     leagues,
     clubHistory,
@@ -109,14 +113,20 @@ async function main() {
     currentClubRows,
     clubLeagueMemberships,
   ] = await Promise.all([
-    fetchAll<{ id: string; runtime_key: string; name: string; search_names: string[] | null; birth_date: string | null; nationality: string | null; position: PositionCode | null; image_url: string | null; active: boolean }>(
+    fetchAll<{ id: string; runtime_key: string; name: string; search_names: string[] | null; birth_date: string | null; nationality: string | null; image_url: string | null; active: boolean }>(
       "players",
-      "id,runtime_key,name,search_names,birth_date,nationality,position,image_url,active",
+      "id,runtime_key,name,search_names,birth_date,nationality,image_url,active",
     ),
 
     fetchAll<{ player_id: string; provider: string; external_id: string }>(
       "player_external_ids",
       "player_id,provider,external_id",
+    ),
+
+    fetchAll<CanonicalPlayerPositionRow>(
+      "player_positions",
+      "player_id,position,is_primary",
+      { orderBy: ["player_id", "position", "is_primary"] },
     ),
 
     fetchAll<{ id: string; name: string; image_url: string | null }>(
@@ -148,6 +158,8 @@ async function main() {
       { currentOnly: true, orderBy: "id" },
     ),
   ])
+
+  const positionsByPlayer = buildPlayerPositionMap(playerPositions)
 
   const clubById = new Map(
     clubs.map((club) => [club.id, club]),
@@ -272,9 +284,7 @@ async function main() {
 
         nation: canonicalizeRuntimeNation(player.nationality ?? ""),
 
-        positions: player.position
-          ? [player.position]
-          : [],
+        positions: requirePlayerPositions(player.id, positionsByPlayer),
 
         currentClubs,
         currentClubAmbiguous: currentClubs.length > 1,
@@ -296,9 +306,6 @@ async function main() {
   const nationSupport =
     new Map<string, number>()
 
-  const positionSupport =
-    new Map<string, number>()
-
   for (const player of runtimePlayers) {
     for (const clubId of player.clubs) {
       increment(clubSupport, clubId)
@@ -314,14 +321,9 @@ async function main() {
         player.nation,
       )
     }
-
-    for (const position of player.positions) {
-      increment(
-        positionSupport,
-        position,
-      )
-    }
   }
+
+  const positionSupport = countPositionSupport(runtimePlayers)
 
   const criteria: GameCriterion[] = []
 
@@ -385,12 +387,7 @@ async function main() {
     ATT: "Attacker",
   }
 
-  for (const position of [
-    "GK",
-    "DEF",
-    "MID",
-    "ATT",
-  ]) {
+  for (const position of POSITION_ORDER) {
     const support =
       positionSupport.get(position) ?? 0
 
