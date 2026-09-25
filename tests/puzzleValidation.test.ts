@@ -5,8 +5,6 @@ import {
   allPlayers,
   checkCriteria,
   checkInvalidPairing,
-  COLUMNS,
-  ROWS,
   findDistinctPlayerAssignment,
   getValidatedFallbackSeed,
   getValidatedRandomSeed,
@@ -52,6 +50,7 @@ function player(
     nation,
     rarity: 0.1,
     positions: ["ATT"],
+    achievements: [],
     currentClubs: [
       {
         id: bayern.value,
@@ -522,74 +521,12 @@ test("active generation validates every generated result", (t) => {
   }
 })
 
-test("exhausted random generation falls back to the validated deterministic puzzle", (t) => {
-  t.mock.method(
-    console,
-    "log",
-    () => {},
-  )
-
-  t.mock.method(
-    console,
-    "warn",
-    () => {},
-  )
-
-  // 0.5 always selects Nation as the criterion type.
-  // Nation × Nation is forbidden, so all random candidates fail.
-  t.mock.method(
-    Math,
-    "random",
-    () => 0.5,
-  )
-
-  const expected =
-    getValidatedFallbackSeed()
-
-  const generated =
-    getValidatedRandomSeed()
-
-  assert.deepEqual(
-    generated.seed,
-    expected.seed,
-  )
-
-  assert.equal(
-    generated.validation.isValid,
-    true,
-  )
-})
-
-test("an invalid preferred fallback is replaced by a validated deterministic fallback", () => {
-  const original = COLUMNS[2]
-
-  try {
-    COLUMNS[2] =
-      "nation:Germany"
-
-    const fallback =
-      getValidatedFallbackSeed()
-
-    assert.equal(
-      fallback.validation.isValid,
-      true,
-    )
-
-    assert.notDeepEqual(
-      fallback.seed,
-      {
-        rows: ROWS,
-        cols: COLUMNS,
-      },
-    )
-
-    assertSolution(
-      fallback.seed,
-      allPlayers,
-    )
-  } finally {
-    COLUMNS[2] = original
-  }
+test("deterministic fallback is stable and satisfies V1 generation rules", () => {
+  const first = getValidatedFallbackSeed()
+  const second = getValidatedFallbackSeed()
+  assert.deepEqual(first.seed, second.seed)
+  assert.equal(first.validation.isValid, true)
+  assertSolution(first.seed, allPlayers)
 })
 
 test("criteria lookup uses canonical criterion keys", () => {

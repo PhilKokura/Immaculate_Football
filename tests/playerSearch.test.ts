@@ -22,6 +22,7 @@ function makePlayer(id: string, name: string, searchNames: string[] = [name]): P
     nation: "Brazil",
     rarity: 0,
     positions: ["ATT"],
+    achievements: [],
     currentClubs: [],
     currentClubAmbiguous: false,
   }

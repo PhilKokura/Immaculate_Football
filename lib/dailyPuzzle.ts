@@ -1,59 +1,18 @@
 import "server-only"
 
-import { getValidatedRandomSeed, validatePuzzle } from "./gameLogic"
+import { getValidatedRandomSeed, satisfiesV1GenerationPolicy } from "./gameLogic"
 import { createSupabaseServerClient } from "./supabase/server"
 
-export interface DailyPuzzle {
-  id: string | number
-  puzzle_date: string
-  row_criteria: string[]
-  column_criteria: string[]
-  created_at: string
-}
+import { parseDailyPuzzle, type DailyPuzzle } from "./dailyPuzzleRecord"
+export type { DailyPuzzle } from "./dailyPuzzleRecord"
 
 const PUZZLE_COLUMNS = "id,puzzle_date,row_criteria,column_criteria,created_at"
 
 function assertPuzzleDate(date: string): void {
   const parsed = new Date(`${date}T00:00:00Z`)
-  if (
-    !/^\d{4}-\d{2}-\d{2}$/.test(date) ||
-    Number.isNaN(parsed.getTime()) ||
-    parsed.toISOString().slice(0, 10) !== date
-  ) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(parsed.getTime()) ||
+      parsed.toISOString().slice(0, 10) !== date) {
     throw new Error("Puzzle date must be a valid YYYY-MM-DD date")
-  }
-}
-
-function parseDailyPuzzle(value: unknown, date: string): DailyPuzzle {
-  if (!value || typeof value !== "object") {
-    throw new Error("Daily puzzle row is malformed")
-  }
-
-  const row = value as Record<string, unknown>
-  if (
-    (typeof row.id !== "string" && typeof row.id !== "number") ||
-    row.puzzle_date !== date ||
-    !Array.isArray(row.row_criteria) ||
-    !row.row_criteria.every(key => typeof key === "string") ||
-    !Array.isArray(row.column_criteria) ||
-    !row.column_criteria.every(key => typeof key === "string") ||
-    typeof row.created_at !== "string"
-  ) {
-    throw new Error("Daily puzzle row is malformed")
-  }
-
-  const rows = row.row_criteria as string[]
-  const cols = row.column_criteria as string[]
-  if (!validatePuzzle({ rows, cols }).isValid) {
-    throw new Error("Stored daily puzzle is not playable with the current runtime data")
-  }
-
-  return {
-    id: row.id as string | number,
-    puzzle_date: date,
-    row_criteria: rows,
-    column_criteria: cols,
-    created_at: row.created_at,
   }
 }
 
@@ -81,8 +40,8 @@ export async function getOrCreateDailyPuzzle(date: string): Promise<DailyPuzzle>
   if (existing) return existing
 
   const { seed, validation } = getValidatedRandomSeed()
-  if (!validation.isValid) {
-    throw new Error("Validated puzzle generator returned an invalid seed")
+  if (!satisfiesV1GenerationPolicy(seed, validation)) {
+    throw new Error("Daily Puzzle generator returned a seed outside V1 policy")
   }
 
   const { data, error, status } = await supabase

@@ -36,6 +36,7 @@ function makePlayer(
     nation: "Brazil",
     rarity: 0.1,
     positions: ["ATT"],
+    achievements: [],
     currentClubs: [{ id: bayern.value, name: "Bayern München" }],
     currentClubAmbiguous: false,
     ...overrides,

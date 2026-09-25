@@ -11190,5 +11190,85 @@
     "label": "Midfielder",
     "eligiblePlayerCount": 1226,
     "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:bundesliga-champion",
+    "type": "achievement",
+    "value": "bundesliga-champion",
+    "label": "Bundesliga Champion",
+    "eligiblePlayerCount": 71,
+    "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:copa-america-winner",
+    "type": "achievement",
+    "value": "copa-america-winner",
+    "label": "CONMEBOL Copa America Winner",
+    "eligiblePlayerCount": 23,
+    "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:world-cup-winner",
+    "type": "achievement",
+    "value": "world-cup-winner",
+    "label": "FIFA World Cup Winner",
+    "eligiblePlayerCount": 27,
+    "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:la-liga-champion",
+    "type": "achievement",
+    "value": "la-liga-champion",
+    "label": "La Liga Champion",
+    "eligiblePlayerCount": 86,
+    "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:ligue-1-champion",
+    "type": "achievement",
+    "value": "ligue-1-champion",
+    "label": "Ligue 1 Champion",
+    "eligiblePlayerCount": 61,
+    "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:premier-league-champion",
+    "type": "achievement",
+    "value": "premier-league-champion",
+    "label": "Premier League Champion",
+    "eligiblePlayerCount": 80,
+    "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:serie-a-champion",
+    "type": "achievement",
+    "value": "serie-a-champion",
+    "label": "Serie A Champion",
+    "eligiblePlayerCount": 79,
+    "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:champions-league-winner",
+    "type": "achievement",
+    "value": "champions-league-winner",
+    "label": "UEFA Champions League Winner",
+    "eligiblePlayerCount": 123,
+    "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:europa-league-winner",
+    "type": "achievement",
+    "value": "europa-league-winner",
+    "label": "UEFA Europa League Winner",
+    "eligiblePlayerCount": 112,
+    "currentLeagueKey": null
+  },
+  {
+    "key": "achievement:euro-winner",
+    "type": "achievement",
+    "value": "euro-winner",
+    "label": "UEFA European Championship Winner",
+    "eligiblePlayerCount": 37,
+    "currentLeagueKey": null
   }
 ]

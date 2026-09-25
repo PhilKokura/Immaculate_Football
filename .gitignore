@@ -31,3 +31,5 @@ next-env.d.ts
 /scripts/provider-evaluation/api-football/.local/
 .pnpm-store/
 *.zip
+
+scripts/provider-evaluation/api-football-trophies/.local/

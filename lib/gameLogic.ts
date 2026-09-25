@@ -5,28 +5,54 @@ import {
   getCriterion,
   getCriterionLabel,
   type CriterionType,
+  type GameCriterion,
   type PlayerWithImage,
 } from "@/components/data/gameData"
 
+import {
+  CURATED_V1_CLUB_IDS, MIN_CELL_SOLUTIONS, MAX_HARD_CELLS, MIN_SOFT_CELLS, MIN_EASY_CELLS,
+  hasV1AxisDiversity, meetsV1CellPolicy, qualifiesV1NationHeader, v1DifficultyCounts,
+} from "./dailyPuzzleV1Policy"
+
+import { CHAMPION_LEAGUE_KEY_BY_ACHIEVEMENT, V1_ACHIEVEMENT_KEYS } from "./achievementCriteria"
+
 export type { PlayerWithImage } from "@/components/data/gameData"
 
-const MIN_GENERATOR_SUPPORT = 9
+// FootGrid UUIDs define the V1 header allowlist; no display-name aliases are used.
+export const CLUBS = CURATED_V1_CLUB_IDS.map(id => {
+  const criterion = getCriterion(`club:${id}`)
+  if (criterion?.type !== "club") throw new Error(`Missing curated V1 club: ${id}`)
+  return criterion.key
+})
+export const LEAGUES = getCriteriaByType("league").map(criterion => criterion.key)
+export const POSITIONS = getCriteriaByType("position").map(criterion => criterion.key)
+export const ACHIEVEMENTS = V1_ACHIEVEMENT_KEYS.map(key => {
+  const criterion = getCriterion(`achievement:${key}`)
+  if (criterion?.type !== "achievement") throw new Error(`Missing V1 achievement: ${key}`)
+  return criterion.key
+})
+export const V1_NATION_COUNTERCRITERIA = [...CLUBS, ...LEAGUES, ...POSITIONS]
 
-export const CLUBS = getCriteriaByType("club", MIN_GENERATOR_SUPPORT).map(
-  criterion => criterion.key,
-)
-export const LEAGUES = getCriteriaByType("league", MIN_GENERATOR_SUPPORT).map(
-  criterion => criterion.key,
-)
-export const NATIONS = getCriteriaByType("nation", MIN_GENERATOR_SUPPORT).map(
-  criterion => criterion.key,
-)
-export const POSITIONS = getCriteriaByType("position", MIN_GENERATOR_SUPPORT).map(
-  criterion => criterion.key,
-)
+function computeV1NationHeaderPool(): string[] {
+  const allowedCounters = new Set(V1_NATION_COUNTERCRITERIA)
+  const counterSupport = new Map(V1_NATION_COUNTERCRITERIA.map(key => [
+    key, new Set(PLAYERS_DATABASE.filter(player => checkCriteria(player, key)).map(player => player.id)),
+  ]))
+  return getCriteriaByType("nation").filter(nation => {
+    const nationPlayers = new Set(
+      PLAYERS_DATABASE.filter(player => checkCriteria(player, nation.key)).map(player => player.id),
+    )
+    const counts = new Map(V1_NATION_COUNTERCRITERIA.map(key => [
+      key, intersectionCount(nationPlayers, counterSupport.get(key)!),
+    ]))
+    return qualifiesV1NationHeader(nationPlayers.size, counts, allowedCounters)
+  }).map(nation => nation.key)
+}
 
-// Preferred fallback. If the provider-backed dataset ever makes this invalid,
-// getValidatedFallbackSeed() deterministically searches for another valid grid.
+// Header eligibility only. Every runtime nation remains available to checkCriteria.
+export const NATIONS = computeV1NationHeaderPool()
+
+// Legacy sample seed for diagnostic scripts. Production fallback uses V1 constraint search.
 export const ROWS = [CLUBS[0], LEAGUES[0], NATIONS[0]]
 export const COLUMNS = [LEAGUES[1], POSITIONS[0], CLUBS[1]]
 
@@ -116,6 +142,8 @@ export function checkCriteria(
       return player.positions.includes(
         criterion.value as PlayerWithImage["positions"][number],
       )
+    case "achievement":
+      return player.achievements.includes(criterion.value)
   }
 }
 
@@ -144,6 +172,16 @@ export function checkInvalidPairing(
     return {
       isInvalid: true,
       reason: "Invalid pairing: Position vs Position is not allowed",
+    }
+  }
+
+  const achievement = row.type === "achievement" ? row : col.type === "achievement" ? col : null
+  const league = row.type === "league" ? row : col.type === "league" ? col : null
+  if (achievement && league &&
+      CHAMPION_LEAGUE_KEY_BY_ACHIEVEMENT[achievement.value] === league.key) {
+    return {
+      isInvalid: true,
+      reason: `Invalid pairing: ${achievement.label} duplicates ${league.label}`,
     }
   }
 
@@ -226,6 +264,8 @@ export function getCellHint(
         return `has nationality ${criterion.label}`
       case "position":
         return `plays ${criterion.label}`
+      case "achievement":
+        return `has won ${criterion.label}`
     }
   }
 
@@ -242,6 +282,8 @@ export function generateGridFromSeed(
 export interface SeedValidationResult {
   isValid: boolean
   playerCounts: { [key: string]: number }
+  /** Canonical row-major cell support; unlike labels, indices cannot collide. */
+  cellCounts: number[]
   invalidCells: string[]
   totalPlayers: number
   minPlayersPerCell: number
@@ -285,6 +327,7 @@ export function validatePuzzle(
   minPlayers = 1,
 ): SeedValidationResult {
   const playerCounts: { [key: string]: number } = {}
+  const cellCounts: number[] = []
   const invalidCells: string[] = []
   const errors: string[] = []
   const candidates: string[][] = []
@@ -309,6 +352,7 @@ export function validatePuzzle(
     return {
       isValid: false,
       playerCounts,
+      cellCounts,
       invalidCells,
       totalPlayers,
       minPlayersPerCell: 0,
@@ -342,6 +386,7 @@ export function validatePuzzle(
       candidates.push(playerIds)
       cellIds.push(`${rowIndex}-${colIndex}`)
       playerCounts[cellLabel] = matchCount
+      cellCounts.push(matchCount)
       totalPlayers += matchCount
       minPlayersPerCell = Math.min(minPlayersPerCell, matchCount)
 
@@ -366,6 +411,7 @@ export function validatePuzzle(
       invalidCells.length === 0 &&
       assignment !== null,
     playerCounts,
+    cellCounts,
     invalidCells,
     totalPlayers,
     minPlayersPerCell:
@@ -401,65 +447,84 @@ export function validateSeedDetailed(
   return validatePuzzle({ rows, cols }, allPlayers, minPlayers)
 }
 
-function pickRandom<T>(values: readonly T[], random: () => number): T {
-  if (!values.length) throw new Error("Cannot choose from an empty criterion pool")
-  return values[Math.floor(random() * values.length)]
+type PairSupport = { count: number }
+interface PreparedV1Generation {
+  criteria: GameCriterion[]
+  pairSupport: Map<string, PairSupport>
 }
 
-function criterionPool(type: CriterionType): string[] {
-  switch (type) {
-    case "club":
-      return CLUBS
-    case "league":
-      return LEAGUES
-    case "nation":
-      return NATIONS
-    case "position":
-      return POSITIONS
+function pairKey(a: string, b: string): string {
+  return a < b ? `${a}|${b}` : `${b}|${a}`
+}
+
+function intersectionCount(a: ReadonlySet<string>, b: ReadonlySet<string>): number {
+  const [smaller, larger] = a.size <= b.size ? [a, b] : [b, a]
+  let count = 0
+  for (const id of smaller) if (larger.has(id)) count++
+  return count
+}
+
+function prepareV1Generation(): PreparedV1Generation {
+  const allowed = new Set([...CLUBS, ...LEAGUES, ...NATIONS, ...POSITIONS, ...ACHIEVEMENTS])
+  const criteria = GAME_CRITERIA.filter(criterion => allowed.has(criterion.key))
+  const support = new Map<string, Set<string>>()
+  for (const criterion of criteria) {
+    support.set(criterion.key, new Set(
+      allPlayers.filter(player => checkCriteria(player, criterion.key)).map(player => player.id),
+    ))
   }
-}
 
-function randomType(random: () => number): CriterionType {
-  return pickRandom<CriterionType>(
-    ["club", "league", "nation", "position"],
-    random,
-  )
-}
-
-function buildCandidateSeed(random: () => number): Seed | null {
-  const rowTypes = [randomType(random), randomType(random), randomType(random)]
-  const colTypes = [randomType(random), randomType(random), randomType(random)]
-
-  for (const rowType of rowTypes) {
-    for (const colType of colTypes) {
-      if (
-        (rowType === "nation" && colType === "nation") ||
-        (rowType === "position" && colType === "position")
-      ) {
-        return null
-      }
+  // Pair validity and eligibility use the same matcher and pairing rules as gameplay.
+  const pairSupport = new Map<string, PairSupport>()
+  for (let i = 0; i < criteria.length; i++) {
+    for (let j = i + 1; j < criteria.length; j++) {
+      const a = criteria[i], b = criteria[j]
+      if (checkInvalidPairing(a.key, b.key).isInvalid) continue
+      const count = intersectionCount(support.get(a.key)!, support.get(b.key)!)
+      if (count >= MIN_CELL_SOLUTIONS) pairSupport.set(pairKey(a.key, b.key), { count })
     }
   }
+  return { criteria, pairSupport }
+}
 
-  const used = new Set<string>()
-  const choose = (type: CriterionType): string | null => {
-    const available = criterionPool(type).filter(key => !used.has(key))
-    if (!available.length) return null
-    const selected = pickRandom(available, random)
-    used.add(selected)
-    return selected
-  }
+let preparedV1: PreparedV1Generation | null = null
+function preparedGeneration(): PreparedV1Generation {
+  return preparedV1 ??= prepareV1Generation()
+}
 
-  const rows = rowTypes.map(choose)
-  const cols = colTypes.map(choose)
-  if (rows.some(value => value === null) || cols.some(value => value === null)) {
-    return null
+function shuffle<T>(values: readonly T[], random: () => number): T[] {
+  const result = [...values]
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.min(i, Math.max(0, Math.floor(random() * (i + 1))))
+    ;[result[i], result[j]] = [result[j], result[i]]
   }
+  return result
+}
 
-  return {
-    rows: rows as string[],
-    cols: cols as string[],
+interface ColumnOption {
+  criterion: GameCriterion
+  counts: number[]
+  hard: number
+  soft: number
+  easy: number
+}
+
+function findColumnOptions(
+  rows: readonly GameCriterion[],
+  prepared: PreparedV1Generation,
+  random: () => number,
+): ColumnOption[] {
+  const rowKeys = new Set(rows.map(row => row.key))
+  const options: ColumnOption[] = []
+  for (const criterion of prepared.criteria) {
+    if (rowKeys.has(criterion.key)) continue
+    const pairs = rows.map(row => prepared.pairSupport.get(pairKey(row.key, criterion.key)))
+    if (pairs.some(pair => !pair)) continue
+    const counts = pairs.map(pair => pair!.count)
+    const { hard, soft, easy } = v1DifficultyCounts(counts)
+    if (hard <= MAX_HARD_CELLS) options.push({ criterion, counts, hard, soft, easy })
   }
+  return shuffle(options, random)
 }
 
 function createSeededRandom(seed: number) {
@@ -473,47 +538,84 @@ function createSeededRandom(seed: number) {
   }
 }
 
-export function getValidatedFallbackSeed(): {
-  seed: Seed
-  validation: SeedValidationResult
-} {
-  const preferred = { rows: [...ROWS], cols: [...COLUMNS] }
-  const preferredValidation = validatePuzzle(preferred)
-
-  if (preferredValidation.isValid) {
-    return { seed: preferred, validation: preferredValidation }
-  }
-
-  const random = createSeededRandom(1337)
-
-  for (let attempt = 0; attempt < 1000; attempt++) {
-    const seed = buildCandidateSeed(random)
-    if (!seed) continue
-
-    const validation = validatePuzzle(seed)
-    if (validation.isValid) return { seed, validation }
-  }
-
-  throw new Error(
-    "No deterministic fallback puzzle could be generated from the runtime dataset",
-  )
+/** Policy applies only when creating a new puzzle; stored Daily Puzzles remain unchanged. */
+export function satisfiesV1GenerationPolicy(seed: Seed, validation: SeedValidationResult): boolean {
+  if (!validation.isValid || seed.rows.length !== 3 || seed.cols.length !== 3) return false
+  const headers = [...seed.rows, ...seed.cols]
+  if (new Set(headers).size !== 6) return false
+  const allowed = new Set([...CLUBS, ...LEAGUES, ...NATIONS, ...POSITIONS, ...ACHIEVEMENTS])
+  if (headers.some(key => !allowed.has(key))) return false
+  const rowTypes = seed.rows.map(key => getCriterion(key)!.type)
+  const colTypes = seed.cols.map(key => getCriterion(key)!.type)
+  if (!hasV1AxisDiversity(rowTypes) || !hasV1AxisDiversity(colTypes)) return false
+  return meetsV1CellPolicy(validation.cellCounts)
 }
 
-export function getValidatedRandomSeed(): {
+export interface GeneratedV1Puzzle {
   seed: Seed
   validation: SeedValidationResult
-} {
-  for (let attempt = 0; attempt < 100; attempt++) {
-    const seed = buildCandidateSeed(Math.random)
-    if (!seed) continue
+  rowAttempts: number
+  usedFallback: boolean
+}
 
-    const validation = validatePuzzle(seed)
-    if (validation.isValid) {
-      return { seed, validation }
+function searchV1Puzzle(random: () => number, maxRowAttempts: number): GeneratedV1Puzzle | null {
+  const prepared = preparedGeneration()
+  for (let attempt = 0; attempt < maxRowAttempts; attempt++) {
+    const rows = shuffle(prepared.criteria, random).slice(0, 3)
+    if (!hasV1AxisDiversity(rows.map(row => row.type))) continue
+    const options = findColumnOptions(rows, prepared, random)
+    if (options.length < 3) continue
+
+    const selected: ColumnOption[] = []
+    let accepted: { seed: Seed; validation: SeedValidationResult } | null = null
+    function chooseColumns(start: number, hard: number, soft: number, easy: number): void {
+      if (accepted) return
+      if (selected.length === 3) {
+        if (soft < MIN_SOFT_CELLS || easy < MIN_EASY_CELLS ||
+            !hasV1AxisDiversity(selected.map(option => option.criterion.type))) return
+        const seed: Seed = {
+          rows: rows.map(row => row.key),
+          cols: selected.map(option => option.criterion.key),
+        }
+        const counts = rows.flatMap((_, rowIndex) => selected.map(option => option.counts[rowIndex]))
+        if (!meetsV1CellPolicy(counts)) return
+        const validation = validatePuzzle(seed, allPlayers, MIN_CELL_SOLUTIONS)
+        if (satisfiesV1GenerationPolicy(seed, validation)) accepted = { seed, validation }
+        return
+      }
+      const needed = 3 - selected.length
+      if (options.length - start < needed) return
+      for (let i = start; i <= options.length - needed; i++) {
+        const option = options[i]
+        if (hard + option.hard > MAX_HARD_CELLS) continue
+        selected.push(option)
+        chooseColumns(i + 1, hard + option.hard, soft + option.soft, easy + option.easy)
+        selected.pop()
+        if (accepted) return
+      }
     }
+    chooseColumns(0, 0, 0, 0)
+    const found = accepted as { seed: Seed; validation: SeedValidationResult } | null
+    if (found) return { ...found, rowAttempts: attempt + 1, usedFallback: false }
   }
+  return null
+}
 
-  return getValidatedFallbackSeed()
+let fallbackV1: GeneratedV1Puzzle | null = null
+export function getValidatedFallbackSeed(): GeneratedV1Puzzle {
+  if (!fallbackV1) {
+    fallbackV1 = searchV1Puzzle(createSeededRandom(1337), 10_000)
+    if (!fallbackV1) throw new Error("No deterministic fallback satisfies V1 Daily Puzzle rules")
+  }
+  return { ...fallbackV1, seed: { rows: [...fallbackV1.seed.rows], cols: [...fallbackV1.seed.cols] },
+    usedFallback: true }
+}
+
+export function getValidatedRandomSeed(random: () => number = Math.random): GeneratedV1Puzzle {
+  const generated = searchV1Puzzle(random, 250)
+  if (generated) return generated
+  const fallback = getValidatedFallbackSeed()
+  return { ...fallback, rowAttempts: 250 + fallback.rowAttempts }
 }
 
 // Compatibility export for any older caller that still expects getRandomSeed().

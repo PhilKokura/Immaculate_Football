@@ -1,7 +1,7 @@
 import playersJson from "./runtime_players.json"
 import criteriaJson from "./runtime_criteria.json"
 
-export type CriterionType = "club" | "league" | "nation" | "position"
+export type CriterionType = "club" | "league" | "nation" | "position" | "achievement"
 export type PositionCode = "GK" | "DEF" | "MID" | "ATT"
 
 export interface GameCriterion {
@@ -27,6 +27,7 @@ export interface PlayerWithImage {
   nation: string
   rarity: number
   positions: PositionCode[]
+  achievements: string[]
   currentClubs: Array<{
     id: string
     name: string

@@ -2,6 +2,7 @@
 import path from "node:path"
 import { createClient } from "@supabase/supabase-js"
 import type { GameCriterion, PlayerWithImage } from "../components/data/gameData"
+import { buildRuntimeAchievements, type AchievementRow, type PlayerAchievementRow } from "./runtime-achievements"
 import { buildPlayerPositionMap, countPositionSupport, requirePlayerPositions, POSITION_ORDER, type CanonicalPlayerPositionRow } from "./runtime-player-positions"
 import { canonicalizeRuntimeNation, createNationFlagResolver } from "./provider-evaluation/api-football/runtime-nations"
 import { currentLeagueKeys, type ClubLeagueMembership } from "./club-league-memberships"
@@ -106,6 +107,8 @@ async function main() {
     players,
     playerExternalIds,
     playerPositions,
+    achievements,
+    playerAchievements,
     clubs,
     leagues,
     clubHistory,
@@ -127,6 +130,12 @@ async function main() {
       "player_positions",
       "player_id,position,is_primary",
       { orderBy: ["player_id", "position", "is_primary"] },
+    ),
+
+    fetchAll<AchievementRow>("achievements", "key,label", { orderBy: "key" }),
+    fetchAll<PlayerAchievementRow>(
+      "player_achievements", "player_id,achievement_key",
+      { orderBy: ["player_id", "achievement_key"] },
     ),
 
     fetchAll<{ id: string; name: string; image_url: string | null }>(
@@ -160,6 +169,9 @@ async function main() {
   ])
 
   const positionsByPlayer = buildPlayerPositionMap(playerPositions)
+  const achievementsByPlayer = buildRuntimeAchievements(
+    achievements, playerAchievements, new Set(players.map(player => player.id)),
+  )
 
   const clubById = new Map(
     clubs.map((club) => [club.id, club]),
@@ -285,6 +297,7 @@ async function main() {
         nation: canonicalizeRuntimeNation(player.nationality ?? ""),
 
         positions: requirePlayerPositions(player.id, positionsByPlayer),
+        achievements: achievementsByPlayer.get(player.id) ?? [],
 
         currentClubs,
         currentClubAmbiguous: currentClubs.length > 1,
@@ -324,6 +337,10 @@ async function main() {
   }
 
   const positionSupport = countPositionSupport(runtimePlayers)
+  const achievementSupport = new Map<string, number>()
+  for (const player of runtimePlayers) {
+    for (const key of player.achievements) increment(achievementSupport, key)
+  }
 
   const criteria: GameCriterion[] = []
 
@@ -410,6 +427,17 @@ async function main() {
     })
   }
 
+  for (const achievement of achievements) {
+    criteria.push({
+      key: `achievement:${achievement.key}`,
+      type: "achievement",
+      value: achievement.key,
+      label: achievement.label,
+      eligiblePlayerCount: achievementSupport.get(achievement.key) ?? 0,
+      currentLeagueKey: null,
+    })
+  }
+
   criteria.sort((a, b) => {
     const typeOrder: Record<
       string,
@@ -419,6 +447,7 @@ async function main() {
       league: 1,
       nation: 2,
       position: 3,
+      achievement: 4,
     }
 
     return (
@@ -462,6 +491,9 @@ async function main() {
   )
   console.log(
     `Positions: ${positionSupport.size}`,
+  )
+  console.log(
+    `Achievements: ${achievements.length}`,
   )
   console.log(
     `Criteria total: ${criteria.length}`,
