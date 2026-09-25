@@ -11164,7 +11164,7 @@
     "type": "position",
     "value": "ATT",
     "label": "Attacker",
-    "eligiblePlayerCount": 660,
+    "eligiblePlayerCount": 782,
     "currentLeagueKey": null
   },
   {
@@ -11172,7 +11172,7 @@
     "type": "position",
     "value": "DEF",
     "label": "Defender",
-    "eligiblePlayerCount": 928,
+    "eligiblePlayerCount": 991,
     "currentLeagueKey": null
   },
   {
@@ -11188,7 +11188,7 @@
     "type": "position",
     "value": "MID",
     "label": "Midfielder",
-    "eligiblePlayerCount": 1049,
+    "eligiblePlayerCount": 1226,
     "currentLeagueKey": null
   }
 ]

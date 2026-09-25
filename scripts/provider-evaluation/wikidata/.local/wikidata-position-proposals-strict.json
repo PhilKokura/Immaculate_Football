@@ -1,0 +1,5824 @@
+{
+  "generatedAt": "2026-09-25T18:58:58.933Z",
+  "summary": {
+    "totalPlayers": 2990,
+    "autoAddPlayers": 75,
+    "autoAddAssignments": 80,
+    "singleCategoryConflicts": 243
+  },
+  "autoAdditions": [
+    {
+      "playerId": "8bfa781e-ca42-452a-868d-d3d3a9d8fff3",
+      "name": "Axel Laurent Angel Lambert Witsel",
+      "wikidataQid": "Q151838",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "ee03ccfb-dc3d-4a8d-9cbf-a85b80901865",
+      "name": "Marius Wolf",
+      "wikidataQid": "Q18342471",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "ATT"
+      ],
+      "additions": [
+        "DEF",
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "f10808cb-6ad0-4569-b124-507dc5916250",
+      "name": "Angeliño",
+      "wikidataQid": "Q20688718",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "6d87315b-2f93-483b-9e39-7c3bb1137202",
+      "name": "Trent John Alexander-Arnold",
+      "wikidataQid": "Q27569376",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "72ee1fcf-64e8-4959-8808-ccd85ecb3fac",
+      "name": "Khvicha Kvaratskhelia",
+      "wikidataQid": "Q61780902",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "d672324e-ff15-4c63-8fcb-e75109ab852e",
+      "name": "John Stones",
+      "wikidataQid": "Q2025900",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "6d735f9f-07d7-4eb4-ad48-2cf391a51b5a",
+      "name": "Vinícius Júnior",
+      "wikidataQid": "Q28973866",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "f5c5f9f6-7349-4cf6-bca9-c30f9839db27",
+      "name": "Nicolò Zaniolo",
+      "wikidataQid": "Q28974273",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "0e2fce1e-7e6a-4277-bfc4-ee5529248f69",
+      "name": "Justin Dean Kluivert",
+      "wikidataQid": "Q26934107",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "737e4d7a-ce19-40ab-9aab-bb5e3d680cd7",
+      "name": "Leonardo Spinazzola",
+      "wikidataQid": "Q6526099",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "1620261c-4816-4eec-b8e6-36cc15dabc9f",
+      "name": "Paulo Exequiel Dybala",
+      "wikidataQid": "Q166317",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "999eb488-3f5a-4266-93e0-94166a02ec25",
+      "name": "Gonçalo Guedes",
+      "wikidataQid": "Q16729477",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "e81c28d0-1a31-4b10-9065-038416deff7f",
+      "name": "Lee Kang-In",
+      "wikidataQid": "Q16174734",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "17f1d557-4010-4c41-8467-6aec8ab4c02c",
+      "name": "Mitchell-Elijah Weiser",
+      "wikidataQid": "Q694852",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "528f9127-001d-4973-9190-29ff7140e36e",
+      "name": "Tyler Shaan Adams",
+      "wikidataQid": "Q19871581",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "0dc90459-27d9-480b-b0ad-62e673e28e60",
+      "name": "Konrad Laimer",
+      "wikidataQid": "Q18670270",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "903a404c-e3d4-4180-a0c5-3785646b8c17",
+      "name": "Ainsley Cory Maitland-Niles",
+      "wikidataQid": "Q18614641",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "f15c907f-b7a2-404b-b41b-19442e56d34b",
+      "name": "Pedraza",
+      "wikidataQid": "Q19871936",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID",
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "4fade750-df4c-47fa-b7af-225d1bc23a8e",
+      "name": "Ethan Kwame Colm Raymond Ampadu",
+      "wikidataQid": "Q26250324",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "29f3c20a-9b4c-419e-abf4-f5d6e5dec898",
+      "name": "Niklas Stark",
+      "wikidataQid": "Q3341549",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "7f058ecf-9eee-4f43-ad0c-8dae52061451",
+      "name": "Dawid Igor Kownacki",
+      "wikidataQid": "Q15983214",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "638bddcf-6217-4037-a17a-347673616770",
+      "name": "Wataru Endo",
+      "wikidataQid": "Q10526787",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "4e2ec374-99c4-4c85-90ac-ada63d37c3fe",
+      "name": "Gabriel Alonso Suazo Urbina",
+      "wikidataQid": "Q21044405",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "c2e29a9d-507f-4cb3-b0be-2eead38fd1be",
+      "name": "Einar Galilea",
+      "wikidataQid": "Q16934993",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "97b544b4-a82c-4476-b0a2-7d4230a76a0f",
+      "name": "Pote",
+      "wikidataQid": "Q56289593",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "77c6025e-e66f-42d0-acef-acead87e44d2",
+      "name": "Morgan Elliot Rogers",
+      "wikidataQid": "Q61598452",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "de8edcd6-f448-4ceb-bdbe-1d150b786ef3",
+      "name": "Jack Peter Grealish",
+      "wikidataQid": "Q16056053",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "ee20ee21-e482-412e-a0eb-50335c4c97e9",
+      "name": "Patrick James Coleman McNair",
+      "wikidataQid": "Q18142105",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "4574f581-8f02-49cd-a2e8-a6997ea15d9b",
+      "name": "Matthew Stuart Cash",
+      "wikidataQid": "Q23041943",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "8bd7681d-516d-49cd-8a12-c0936dced7e5",
+      "name": "Eberechi Oluchi Eze",
+      "wikidataQid": "Q28445512",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "888a13b5-121c-447c-b940-d74e127bea08",
+      "name": "Michael Akpovie Olise",
+      "wikidataQid": "Q62050484",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "235fc6eb-2fdc-4713-afee-324c56515053",
+      "name": "Nayef Aguerd",
+      "wikidataQid": "Q28872567",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "18f4be48-00ba-4bc4-979b-396c3fdf427a",
+      "name": "Arnaud Dominique Nordin",
+      "wikidataQid": "Q27049316",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "b9976cba-403e-4713-a3e6-6537d1b6602e",
+      "name": "Robert Andrich",
+      "wikidataQid": "Q19958843",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "9f35ee42-1262-4ebb-a40a-81619c0fc937",
+      "name": "Michael Gregoritsch",
+      "wikidataQid": "Q699094",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "3325b302-1111-4ada-9c8f-7a50b7b5b9ef",
+      "name": "Maximilian Mittelstädt",
+      "wikidataQid": "Q22998602",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID",
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "6cd69d3f-84ae-4ea8-82d8-62ebbd71a31c",
+      "name": "Bote Ridle Nzuzi Baku",
+      "wikidataQid": "Q46126025",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "88c56c54-576f-4f8f-a57d-efc195a5ca4f",
+      "name": "Felix Agu",
+      "wikidataQid": "Q52357690",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "7f436190-8808-452b-a868-8f6ee5dc643f",
+      "name": "Aron Leonard Dønnum",
+      "wikidataQid": "Q35314083",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "1a11b722-9996-4a36-b494-38626e163478",
+      "name": "Matheus Nunes",
+      "wikidataQid": "Q96211488",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e9b3efc1-f1c4-4d82-aa4d-70ee59c9c7d5",
+      "name": "Aitor Ruibal",
+      "wikidataQid": "Q46748781",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "DEF"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "04b2c281-adb2-4cb3-af9d-b5f0b50f2503",
+      "name": "Zubeldia",
+      "wikidataQid": "Q23907908",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "5b0149ee-8b7d-40ef-8fb4-3bb98286a48b",
+      "name": "Javi Galán",
+      "wikidataQid": "Q27662868",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "874321a3-4819-4230-bb40-5c80a59b9ba1",
+      "name": "Gianluca Cristiano Busio",
+      "wikidataQid": "Q51455020",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "c32ad17b-2c6b-4c9c-b290-669f15c44cfb",
+      "name": "Aimar Oroz",
+      "wikidataQid": "Q64735295",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "e9c261e3-eef1-4871-a22f-38690ebb21b7",
+      "name": "Omri Gandelman",
+      "wikidataQid": "Q101246957",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "DEF",
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "7988ebc9-76cf-4e8d-a9e1-90ffa86c41e4",
+      "name": "Oihan Sancet",
+      "wikidataQid": "Q66466886",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "6191e06d-ee2d-45c7-9bdc-a9b981bdbb48",
+      "name": "Ansu Fati",
+      "wikidataQid": "Q66743376",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "f795055f-d744-4315-abeb-3e3451585166",
+      "name": "Pablo Ibáñez",
+      "wikidataQid": "Q112237324",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "6e5eda14-c039-4c48-88e4-e7473bdbb78b",
+      "name": "Charles Marc De Ketelaere",
+      "wikidataQid": "Q68607008",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "fd16350d-c1cc-4482-9447-960e4a61aa72",
+      "name": "Cole Jermaine Palmer",
+      "wikidataQid": "Q99760796",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e2661f34-9d7e-42be-9169-174bb4676383",
+      "name": "Nick Woltemade",
+      "wikidataQid": "Q84158344",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "6535697d-54e3-4efa-a25d-d31b8b7a9f13",
+      "name": "Hugo Novoa",
+      "wikidataQid": "Q99430844",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "MID",
+        "DEF"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "e0deed21-c227-46ce-a3dd-a2957755b955",
+      "name": "Urko González",
+      "wikidataQid": "Q99514820",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "e6fb6d42-c2e6-490f-b43a-cead356f2d6e",
+      "name": "Dembo Sylla",
+      "wikidataQid": "Q115677993",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "73f9be23-7cdf-4b8a-b44e-cd068fd0bd09",
+      "name": "Paul Nebel",
+      "wikidataQid": "Q97344548",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "b7f308ed-8674-4fc7-a0d3-aa1787ada3aa",
+      "name": "Nathan Adewale Temitayo Tella",
+      "wikidataQid": "Q96464733",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e1bbd4af-36fd-424a-8a59-72e94bcbfe40",
+      "name": "Oscar Exequiel Zeballos",
+      "wikidataQid": "Q71735627",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "f5f9087f-fbc0-404f-8238-2a02a8240ee1",
+      "name": "Federico Gatti",
+      "wikidataQid": "Q108491198",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "57ad8ba6-d303-4d12-bc79-ff0cba3278f4",
+      "name": "Maghnes Akliouche",
+      "wikidataQid": "Q108910786",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "839ac84c-5961-40d5-94c0-7d24192ca262",
+      "name": "Omari Elijah Giraud-Hutchinson",
+      "wikidataQid": "Q111145131",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "cc8fde71-f27a-4114-9ee2-ff95c0256253",
+      "name": "Lewis Kieran Hall",
+      "wikidataQid": "Q110487162",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "63e5b1ea-8571-4f46-97e9-08588ba7ab45",
+      "name": "Dango Aboubacar Faissal Ouattara",
+      "wikidataQid": "Q108000402",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e7966845-dd22-4042-a4c5-5d2744b1be50",
+      "name": "Álex Calatrava",
+      "wikidataQid": "Q118136957",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "460d0145-c30c-423e-af9b-e8356e5fd73e",
+      "name": "Archie James Francis Gray",
+      "wikidataQid": "Q114826394",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "191268cd-2dce-400b-a36c-5e1bc2b2aad4",
+      "name": "Mattes Hansen",
+      "wikidataQid": "Q124261341",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "71d489b0-58c1-49d7-ab95-08b66980b810",
+      "name": "Víctor Muñoz",
+      "wikidataQid": "Q121422889",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "79503adb-94be-4252-b8a4-19d3afe29d0f",
+      "name": "Kenan Yıldız",
+      "wikidataQid": "Q113184832",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "bced430b-1be0-4c8e-a21c-f7d8f91c4162",
+      "name": "Can Yılmaz Uzun",
+      "wikidataQid": "Q118799181",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "34b2bb74-4607-489c-b8f7-656d30e7cc93",
+      "name": "Oso",
+      "wikidataQid": "Q123709305",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "DEF",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "fb088896-9f69-4920-945f-6f0f2eb57aae",
+      "name": "Jean-Mattéo Bahoya Négoce",
+      "wikidataQid": "Q116052667",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "dd2fc8c8-767d-459f-8507-53d75f7a3894",
+      "name": "Rodrigo Mora",
+      "wikidataQid": "Q122733082",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "c4d381fd-0e47-4cb3-8266-130abb4cfecd",
+      "name": "Allan",
+      "wikidataQid": "Q132307478",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "ATT",
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "6fb13966-bab3-434f-bfe5-1832a4280ebc",
+      "name": "Franco Mastantuono",
+      "wikidataQid": "Q123289726",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "6f5539f7-64cc-4927-8b56-6aa2c973a1f5",
+      "name": "Lennart Karl",
+      "wikidataQid": "Q130776450",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "MID",
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    }
+  ],
+  "singleCategoryConflicts": [
+    {
+      "playerId": "95bc2d2a-0e31-42dc-8c0c-e8186182a146",
+      "name": "Christian Mate Pulišić",
+      "wikidataQid": "Q22279773",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "ed3488cf-4b57-4fb6-a28e-5b711ba4a0b7",
+      "name": "Clinton Mata",
+      "wikidataQid": "Q18637707",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "a0291a24-9920-40ea-a187-c32bcbfebc96",
+      "name": "Benjamin Paa Kwesi Henrichs",
+      "wikidataQid": "Q20992981",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "36d78781-a879-4b1c-999b-0640c50f25ff",
+      "name": "Juan Miranda",
+      "wikidataQid": "Q38198371",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "0fa45b0c-6832-4f5e-963d-1e8c723fe89c",
+      "name": "Matteo Politano",
+      "wikidataQid": "Q6789694",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "7c14d8b4-1482-4e92-9493-a2669d9dac7b",
+      "name": "Cody Mathès Gakpo",
+      "wikidataQid": "Q28801927",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "20f85fb5-c1b2-4105-b483-886a3cc8bc49",
+      "name": "Thomas André A. Meunier",
+      "wikidataQid": "Q2036160",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "a320e4e8-b467-4a47-8bf8-d77e33f009a4",
+      "name": "Jurgen Ekkelenkamp",
+      "wikidataQid": "Q51796228",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "6e05aeeb-d785-4d53-b2f8-ac9d96e93eb1",
+      "name": "David Neres",
+      "wikidataQid": "Q27801691",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "95e244ac-7676-44fe-ad0e-2ab4336a816f",
+      "name": "Joelinton",
+      "wikidataQid": "Q20047360",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "06631ebe-eae8-40b9-b0b1-8b7c40189c28",
+      "name": "Robin Hack",
+      "wikidataQid": "Q41487752",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "5abeb4b3-2de7-41d6-83c7-a27f82b106c4",
+      "name": "Lucas Vázquez",
+      "wikidataQid": "Q5981954",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "8fcc35fc-2ddb-4123-acda-f59b0cfb57d6",
+      "name": "Jaka Bijol",
+      "wikidataQid": "Q47088780",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "aee7e5d6-3302-4029-948a-d2b63e641550",
+      "name": "Nikola Vlašić",
+      "wikidataQid": "Q17501875",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "3dde807d-e6ad-4ffe-8ad7-f1722289bf59",
+      "name": "Rodrigo Bentancur Colmán",
+      "wikidataQid": "Q18817134",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "51e2487f-bf51-4644-a4b5-8600da6b1425",
+      "name": "Federico Bernardeschi",
+      "wikidataQid": "Q15220993",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "9dd1587a-9f25-4fa7-8d7e-152cf1753306",
+      "name": "Marcus Rashford",
+      "wikidataQid": "Q22951255",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "5dfbe999-8650-4ef9-8226-3062e5d75ba4",
+      "name": "Kristoffer Vassbakk Ajer",
+      "wikidataQid": "Q18157457",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "4f3ad9b8-6b62-43ec-8073-68a9c9b115ed",
+      "name": "Timothy Tarpeh Weah",
+      "wikidataQid": "Q31871265",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "3809f763-c873-402f-b46b-248ac7614b08",
+      "name": "Marcel Sabitzer",
+      "wikidataQid": "Q472300",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "c2622fa9-2536-45a0-886b-5447866b27c8",
+      "name": "Alexandre Lauray",
+      "wikidataQid": "Q63170433",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "f73f3fdc-a166-42d8-935a-d62e76392489",
+      "name": "Robert Faxe Skov",
+      "wikidataQid": "Q19973701",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "4bd07811-5b23-47ec-ae87-d66cf36d79d4",
+      "name": "Ferdi Erenay Kadıoğlu",
+      "wikidataQid": "Q26719541",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "bccb84c2-a4eb-4c8e-a346-2d8216eec0ae",
+      "name": "Alexis Jesse Saelemaekers",
+      "wikidataQid": "Q49166190",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "3f0f3fc8-9b14-41e6-a3d0-c5eb3bd346bb",
+      "name": "Bukayo Ayoyinka Temidayo Saka",
+      "wikidataQid": "Q59306386",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "22143289-a96b-402d-b047-3680daa4c742",
+      "name": "Thierry Correia",
+      "wikidataQid": "Q59306442",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "9d920e4a-c168-4e95-a0b7-cde86614c0c9",
+      "name": "Iván Martín",
+      "wikidataQid": "Q60667184",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "457f8191-b58c-4b2e-9c49-2b70d17a3e60",
+      "name": "Dani Raba",
+      "wikidataQid": "Q42332999",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "7cf47e22-140a-4cf5-b57a-2c9d37f1527d",
+      "name": "Lassana Coulibaly",
+      "wikidataQid": "Q20949218",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "de7078b3-1f1b-43e6-a307-fdbab425aca5",
+      "name": "Adam Marušić",
+      "wikidataQid": "Q16234793",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "eac60278-f30e-4ffd-bbaa-e46a66a8f3a5",
+      "name": "Pedro Neto",
+      "wikidataQid": "Q30036972",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "9f95a5fd-b19d-44ad-baf8-a383a82f7fef",
+      "name": "Boubacar Bernard Kamara",
+      "wikidataQid": "Q29962926",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "5bc43346-802c-448a-a6a9-2bee1de51eaf",
+      "name": "Florian Tristán Mariano Thauvin",
+      "wikidataQid": "Q27476",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "2fe393f6-b9f1-44f0-ad70-14e517dfa45a",
+      "name": "Giorgi Tsitaishvili",
+      "wikidataQid": "Q55108591",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "68dc9b6a-c826-413b-a8aa-00b7247e94fa",
+      "name": "Benjamin Michel Édouard André",
+      "wikidataQid": "Q2475780",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "72898401-319e-45ce-acf0-39e604c493c3",
+      "name": "Timothé Nkada",
+      "wikidataQid": "Q66432295",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "83a96ab0-943b-475f-9f51-588453ac0d08",
+      "name": "Luis Fernando Díaz Marulanda",
+      "wikidataQid": "Q28531111",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "d6fcf49a-b5f2-4b09-be27-cea9e75b5df2",
+      "name": "Ritsu Dōan",
+      "wikidataQid": "Q20630956",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "2614a153-a870-45de-851f-f03bb44344cd",
+      "name": "Albert Guðmundsson",
+      "wikidataQid": "Q21171299",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "97299448-bfce-45af-941e-835dc67c1df0",
+      "name": "Youssouf Nyange Ndayishimiye",
+      "wikidataQid": "Q39301940",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "31a8c710-f34d-4a46-bc94-4d5b9102e370",
+      "name": "Nahuel Molina Lucero",
+      "wikidataQid": "Q22082590",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "ddcd853f-47c9-43c2-8e7e-b8da44750ee2",
+      "name": "Marco Grüll",
+      "wikidataQid": "Q61869848",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "94421990-b5bd-4b8f-a73f-0f39fb8bb79e",
+      "name": "Felix Bacher",
+      "wikidataQid": "Q55846973",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "f4c1b29c-1e19-41e5-b41f-d0094489ba91",
+      "name": "Luka Sučić",
+      "wikidataQid": "Q67999144",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "45abb208-e5f8-408f-85e7-8637d445b97a",
+      "name": "Mërgim Vojvoda",
+      "wikidataQid": "Q18589243",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "8a9d0513-0fe9-4a15-9709-eb16d08bb870",
+      "name": "Olivier Deman",
+      "wikidataQid": "Q69496466",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "ecb664ff-0453-4646-b0ca-9485b36449a3",
+      "name": "Igor Paixão",
+      "wikidataQid": "Q65548497",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "e0f0212f-a87f-4037-8095-cdc66cfae77f",
+      "name": "Josip Juranović",
+      "wikidataQid": "Q19968645",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "31b1ccb5-c93c-48e0-b7a5-bf9aa36a971a",
+      "name": "Mousa Tamari",
+      "wikidataQid": "Q27909473",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "88de67b2-e958-4d5a-aeb2-00827bc7c730",
+      "name": "Mohammed Kudus",
+      "wikidataQid": "Q56877051",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "59c5c9e4-150f-47e8-9e6d-b64e737cced6",
+      "name": "Iliman Cheikh Baroy Ndiaye",
+      "wikidataQid": "Q105956269",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "8fbcfecf-2379-413a-8833-bbcf3eab0177",
+      "name": "Benjamin Sorba William Thomas",
+      "wikidataQid": "Q105482087",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "5010192c-33f9-4e17-aca2-d59465fb1c44",
+      "name": "Morgan Anthony Gibbs-White",
+      "wikidataQid": "Q28147578",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "fb42c579-1d7f-4975-b8a7-dcab28c9e98e",
+      "name": "Ryan Giles",
+      "wikidataQid": "Q59914064",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "edc906c6-aff8-4e6d-a55c-99207933684c",
+      "name": "Adama Traoré",
+      "wikidataQid": "Q15221199",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "1d2de66a-255b-48e5-a508-f5a8bc38a28d",
+      "name": "Harvey Lewis Barnes",
+      "wikidataQid": "Q27974879",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "f290dd25-5620-434a-bb18-7faf190670bd",
+      "name": "Grady George Diangana",
+      "wikidataQid": "Q56761319",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "4425c951-3d8a-452e-b073-57f0ae3625f4",
+      "name": "Kouassi Ryan Sessegnon",
+      "wikidataQid": "Q26250297",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "7cd3c8d5-cb3a-4286-961d-ef34752cd45f",
+      "name": "Kieran O'Neill Dowell",
+      "wikidataQid": "Q18627270",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "e12b3fff-5b07-4a1f-9af2-c7053948acb3",
+      "name": "Jack Raymond Clarke",
+      "wikidataQid": "Q57078908",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "080dac56-8f39-481f-b44d-a48e72b8e769",
+      "name": "Jacob Kai Murphy",
+      "wikidataQid": "Q15622117",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "b5a8efdf-8a99-4315-b1e4-077c56f6cb3a",
+      "name": "Jayden Ian Bogle",
+      "wikidataQid": "Q56223640",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "2ee7e033-1b0a-4ba0-afcd-7ca1911f781d",
+      "name": "Jay Rhys Dasilva",
+      "wikidataQid": "Q21572868",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "bb5c8156-f4ed-47a4-a8ed-68d63bc93374",
+      "name": "Antoine Serlom Semenyo",
+      "wikidataQid": "Q52990659",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "1b5643c0-f7a8-4e26-8123-0bedd36b48c8",
+      "name": "Daniel Owen James",
+      "wikidataQid": "Q30689579",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "af534771-7b0c-4a35-9a2c-e43ac57a1dfe",
+      "name": "Neal Maupay",
+      "wikidataQid": "Q1101455",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "7e0bdf26-c689-4511-ba56-5c134aace035",
+      "name": "Lennard Maloney",
+      "wikidataQid": "Q51217743",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "2e05198b-39c7-455b-9e1f-0830064cbb5d",
+      "name": "Matt Davidson Rider Crooks",
+      "wikidataQid": "Q17496496",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "f2c2e3d0-7fed-4618-a30d-c7345116d10f",
+      "name": "James Clayton Hill",
+      "wikidataQid": "Q60734582",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "c72097e9-e3e5-4a1d-ae70-40dbc4f57dd7",
+      "name": "Jack Edward Rudoni",
+      "wikidataQid": "Q78488478",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "d5849d94-1fa2-4eb8-abe9-560cf633fb50",
+      "name": "Gauthier Hein",
+      "wikidataQid": "Q27015963",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "b4ddbb88-3546-4a2e-b5ce-2ee27c3f0c7d",
+      "name": "Bryan Tetsadong Marceau Mbeumo",
+      "wikidataQid": "Q49561427",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "5f7afcf9-7978-448c-a1f9-6db51e5573c9",
+      "name": "Romain Paul Jean-Michel Perraud",
+      "wikidataQid": "Q28962661",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "8cc70a76-0b6b-4dad-8e4e-0fdec6af787a",
+      "name": "Alexis Claude-Maurice",
+      "wikidataQid": "Q35537374",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "b4cb3a79-6dd2-4f5d-836e-1ff3b1611ee2",
+      "name": "Gaëtan Perrin",
+      "wikidataQid": "Q23762797",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "9dab208a-6ae9-4fa9-9843-dc2bb8a47190",
+      "name": "Vincent Marchetti",
+      "wikidataQid": "Q21621940",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "8dbb72d5-e925-480c-a1f9-7f27387eb6c1",
+      "name": "Lucas Buadés",
+      "wikidataQid": "Q41787061",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "5ee51936-4e28-4244-80e3-8a2000ef1ffa",
+      "name": "Ludovic Régis Arsène Blas",
+      "wikidataQid": "Q22003400",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "9a003256-0368-41fd-94e4-69eba1233e5b",
+      "name": "Ruben Aguilar",
+      "wikidataQid": "Q20090069",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "17d3b06f-0157-479d-b582-b7be511f4a9e",
+      "name": "Jim Émilien Ngowet Allevinah",
+      "wikidataQid": "Q62467948",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "3aa00a20-d1c0-4ca9-b10f-4b2b73216eae",
+      "name": "Nathan Ngoumou Minpole",
+      "wikidataQid": "Q64746308",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "0521c3e0-1807-40ca-9883-29cb5cb1106e",
+      "name": "Jean-Victor Makengo",
+      "wikidataQid": "Q20851378",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "b5dc5611-d63c-46f4-94b6-0275a8164f06",
+      "name": "Mehmet Zeki Çelik",
+      "wikidataQid": "Q50628268",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "62ff5f4b-4a7d-48ef-9e7a-5c81ece74003",
+      "name": "Adrien Thomasson",
+      "wikidataQid": "Q18938815",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "0008d908-62cc-423d-a68c-0742a7662861",
+      "name": "Julian Ryerson",
+      "wikidataQid": "Q28717698",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "f50dceb1-7bae-49ea-86e6-8be03a55a5ac",
+      "name": "Josha Mamadou Karaboue Vagnoman",
+      "wikidataQid": "Q50384596",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "446c931b-75c4-4a7e-b13e-bbde81e8f0e9",
+      "name": "Bakery Jatta",
+      "wikidataQid": "Q24577799",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "e0f313a9-2966-41c2-b7a7-56f6e4dc309a",
+      "name": "Jonathan Clauss",
+      "wikidataQid": "Q41932444",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "47afc29d-ca80-4327-a9da-1ba099bc8677",
+      "name": "Tom Baack",
+      "wikidataQid": "Q57017552",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "5f905727-d108-4f1b-908d-5ab167c0765c",
+      "name": "David Raum",
+      "wikidataQid": "Q28540571",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "54fdf74a-5d7e-4874-9cc2-1aace9315b0b",
+      "name": "Jan-Niklas Beste",
+      "wikidataQid": "Q36391177",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "7732d96d-f544-4a0d-859b-be57666df117",
+      "name": "John Yeboah Zamora",
+      "wikidataQid": "Q58215731",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "a14898f9-87be-44bd-a93f-330d3cc459ed",
+      "name": "Kenan Karaman",
+      "wikidataQid": "Q15901932",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "83c040e6-f185-4cc1-bb19-0021b9338a7d",
+      "name": "Anton-Leander Donkor",
+      "wikidataQid": "Q55820143",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "4a130e48-17cf-4325-83e7-b0dba5b1133f",
+      "name": "Phillipp Mwene",
+      "wikidataQid": "Q11634138",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "9c4b8c53-d94d-46e4-b9e3-b1cf26e12795",
+      "name": "Janik Haberer",
+      "wikidataQid": "Q1682741",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "a0a69fdd-8f9f-4de1-a33a-812631ffe80a",
+      "name": "Nicolás Iván González",
+      "wikidataQid": "Q43381082",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "3865841d-13cf-4110-b587-0ada5444d53d",
+      "name": "Sebastian Reinhard Klaas",
+      "wikidataQid": "Q29917040",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "d6d2a6da-9c60-4a64-af8b-48e0c6fa42cb",
+      "name": "Lion Lauberbach",
+      "wikidataQid": "Q37305729",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "49ab37c3-d728-42ef-be18-25825eff03e6",
+      "name": "Deniz Undav",
+      "wikidataQid": "Q55955918",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "2758a780-353f-4cae-9419-0a851bb4d5a0",
+      "name": "Finn-Dominik Porath",
+      "wikidataQid": "Q26212027",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e8f35fc4-9f70-44bc-97fc-01dc87d075d2",
+      "name": "Luca Pascal Schnellbacher",
+      "wikidataQid": "Q14776663",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "d23976aa-5898-4e01-b6b7-0483b7b94aff",
+      "name": "Federico Chiesa",
+      "wikidataQid": "Q26704703",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "83ed7bfd-1e26-4b0d-87db-bdec45e55be6",
+      "name": "Robin Everardus Gosens",
+      "wikidataQid": "Q15644548",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "c677457f-5937-4290-915c-325db4f3b51a",
+      "name": "Nicolò Cambiaghi",
+      "wikidataQid": "Q99836889",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "3936445d-e455-48b1-8ee0-7c9acc7875fe",
+      "name": "Michel Ndary Adopo",
+      "wikidataQid": "Q59914804",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "4fe45a10-973d-4eef-85ea-96358adccd27",
+      "name": "Benjamin Lhassine Kone",
+      "wikidataQid": "Q59914746",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "d8471056-1387-41cc-a6da-a5b0844e8efc",
+      "name": "Jérémie Boga",
+      "wikidataQid": "Q20925240",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "c58c0339-4031-4949-ba4c-bb81d5144d4c",
+      "name": "Samuele Birindelli",
+      "wikidataQid": "Q28976858",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "ea02b70f-fa8d-4318-b3fc-0cb24b9ea291",
+      "name": "Mattia Zaccagni",
+      "wikidataQid": "Q28968068",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e00c94c9-4f35-44de-93fd-9acfada1f029",
+      "name": "Federico Dimarco",
+      "wikidataQid": "Q20204829",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "ffeceaff-0419-49f3-9ad3-9e5db5806ec9",
+      "name": "M&apos;Bala Nzola",
+      "wikidataQid": "Q30474499",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "1b63fbfa-89bf-420e-84e5-b464bbe3d03a",
+      "name": "Takefusa Kubo",
+      "wikidataQid": "Q27067753",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e6e0dbd9-9f9a-45a1-a94c-f377a3a3c343",
+      "name": "Satoshi Tanaka",
+      "wikidataQid": "Q77670479",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "3a38b6f1-7df7-4992-a4db-71884cb71e51",
+      "name": "Kingsley Osezele Ehizibue",
+      "wikidataQid": "Q18426157",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "2d045c01-15db-41b9-9b47-dff3d68daa56",
+      "name": "Zian Flemming",
+      "wikidataQid": "Q40451970",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "4e3c65da-c39f-447b-8d46-3cb454827149",
+      "name": "Azor Matusiwa",
+      "wikidataQid": "Q27908084",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "2b02e327-e814-4e99-97fe-ee0f212e9150",
+      "name": "Zakaria Eddahchouri",
+      "wikidataQid": "Q64032799",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "8e6ddd9a-55e3-4c0a-8d64-a4a9f39326fb",
+      "name": "Jay Idzes",
+      "wikidataQid": "Q52348645",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "f29f1896-d299-4e88-91af-8a37569842b7",
+      "name": "Sheraldo Rudi Becker",
+      "wikidataQid": "Q16069260",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "306a79a5-f197-429a-a1dd-f46d89c9440b",
+      "name": "Michał Krzysztof Skóraś",
+      "wikidataQid": "Q64167368",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "13264a82-1526-41a8-8d01-44680100a296",
+      "name": "Ricardo Mangas",
+      "wikidataQid": "Q81003636",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "28767a24-7e66-473a-a9a9-61686910cee2",
+      "name": "João Mário",
+      "wikidataQid": "Q60676442",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "1b158bfa-8eb1-46de-831c-6b9ccf6bdf98",
+      "name": "Aaron Buchanan Hickey",
+      "wikidataQid": "Q64010525",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "1fcf78c5-49ae-449c-876c-7bfefc0f4983",
+      "name": "Kike Barja",
+      "wikidataQid": "Q32236556",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "4a90acff-9cff-4636-9216-9daa41c98503",
+      "name": "Pervis Josué Estupiñán Tenorio",
+      "wikidataQid": "Q20994068",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "2bdc4e75-ad4d-4858-a246-6c04e3e29a83",
+      "name": "Víctor García",
+      "wikidataQid": "Q56604038",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "ea86da8f-f9c1-41b1-a039-03b4264551a6",
+      "name": "Luis Rioja",
+      "wikidataQid": "Q56223387",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "14e287ce-32f7-439c-ab33-8e8c717e2560",
+      "name": "Brugui",
+      "wikidataQid": "Q42379487",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "1a20f8b5-5ed1-4095-a78f-aa7ac5e8a71e",
+      "name": "Iñigo Vicente",
+      "wikidataQid": "Q54656757",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "971ca2e7-b858-4573-9aef-e398ad06edc5",
+      "name": "Pepelu",
+      "wikidataQid": "Q22007369",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "139ae172-51f1-4cea-87d1-9a588563c62c",
+      "name": "Álvaro García",
+      "wikidataQid": "Q14777639",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "ee27a4ea-7d93-4ef2-8973-f6cac63f3b6b",
+      "name": "Moi Gómez",
+      "wikidataQid": "Q3884280",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "dae0b3c5-22ca-48f2-826a-3397af87b2de",
+      "name": "Isac Alexi Sivert Lidberg",
+      "wikidataQid": "Q21860037",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "6d7c8164-5e9c-4f4f-a49a-cf4375941703",
+      "name": "Pontus Skule Erik Almqvist",
+      "wikidataQid": "Q42393756",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "77653b61-ae66-4718-ad83-47248d9764ad",
+      "name": "Miro Max Maria Muheim",
+      "wikidataQid": "Q49167084",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "916a692f-b7e4-41dc-8e88-c566f40eb8dc",
+      "name": "Cedric Jan Itten",
+      "wikidataQid": "Q22965497",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "f31ba5a1-829b-4037-b7ae-ef6c67ab69c7",
+      "name": "Joseph Michael Scally",
+      "wikidataQid": "Q54861644",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "acffe059-6c62-4743-8539-66fc160b2104",
+      "name": "Tajon Trevor Buchanan",
+      "wikidataQid": "Q62016194",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "b2591392-f3c2-4081-8a6c-71d44b9a7914",
+      "name": "Derek Austin Cornelius",
+      "wikidataQid": "Q29901014",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "95be5530-8730-4791-a64b-51a5ea79ac5b",
+      "name": "Imad Rondić",
+      "wikidataQid": "Q100287932",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "1d23dea5-d732-4144-9359-2b737f46f214",
+      "name": "Omar Marmoush",
+      "wikidataQid": "Q28065104",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "9e22dee1-7630-45bf-ab08-7e33915bfb68",
+      "name": "Robert Navarro",
+      "wikidataQid": "Q60050053",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "fafc6eba-4b6d-4c09-a5e0-6ef4490d24a1",
+      "name": "Gnantin Yann Gboho",
+      "wikidataQid": "Q66107406",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "ac3fdfe7-af5e-4dd1-a816-b88076c71cd4",
+      "name": "Emanuele Valeri",
+      "wikidataQid": "Q102156391",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "6593f95d-7b1b-41fa-85d3-456511c39fcd",
+      "name": "Alemão",
+      "wikidataQid": "Q47464997",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "1d753c89-f6c4-48c3-b5c9-b73069dd0875",
+      "name": "Osame Sahraoui",
+      "wikidataQid": "Q96679651",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "61b952d7-81af-4420-906a-4549b7d6a3b5",
+      "name": "Keane William Lewis-Potter",
+      "wikidataQid": "Q62269289",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "aafc1a29-919f-4ff6-b91b-cfae98a55e51",
+      "name": "Juan Iglesias",
+      "wikidataQid": "Q104602884",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "7bbce30a-8b82-4f77-a297-78621ba23860",
+      "name": "Patrick Wimmer",
+      "wikidataQid": "Q65948837",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "a325500e-7e6d-4c2a-9073-7916597454cf",
+      "name": "Andrea Cambiaso",
+      "wikidataQid": "Q69656941",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e18f4186-781b-4eb2-b319-11ecfd281f75",
+      "name": "Pol Lozano",
+      "wikidataQid": "Q52192222",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "0063e70e-64fb-4393-9d1c-ccfbd9a9b6e5",
+      "name": "Nadir Zortea",
+      "wikidataQid": "Q69408385",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "fbb736b2-0708-43d4-b68e-0146cd470431",
+      "name": "Jamie Leweling",
+      "wikidataQid": "Q65964628",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "acf2cee9-fa49-45ec-8448-c444967854b5",
+      "name": "Jorge de Frutos",
+      "wikidataQid": "Q65159565",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "4aa4811a-970e-4a42-99ff-cf8471638a36",
+      "name": "Amine Adli",
+      "wikidataQid": "Q66586702",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "310f1333-1159-4ea6-8d0f-a24d3f157720",
+      "name": "Brennan Price Johnson",
+      "wikidataQid": "Q66108160",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "2c256b02-0b46-4af2-bdd7-e95a9603349a",
+      "name": "Isi Palazón",
+      "wikidataQid": "Q20016464",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "97be12f5-0f2e-4354-9e86-37d6323f4117",
+      "name": "João Lucas de Souza Cardoso",
+      "wikidataQid": "Q72219351",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "7edd240a-f52b-4c34-95c6-ceb44b271449",
+      "name": "Pedri",
+      "wikidataQid": "Q66606355",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "04336413-2cc5-412a-92f0-6ec23acb28d8",
+      "name": "Daniel Maldini",
+      "wikidataQid": "Q84247209",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "2cbe3c1c-24cc-43bd-8c9e-ad2b040abacb",
+      "name": "Félix Correia",
+      "wikidataQid": "Q66058411",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "ad020d1e-ed6f-4bf4-ae2f-bb466c29f9cf",
+      "name": "Fabiano Parisi",
+      "wikidataQid": "Q83643499",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "3dc32ffc-96d7-49e4-a5eb-c1ad3a3cc3ec",
+      "name": "Neco Shay Williams",
+      "wikidataQid": "Q72921909",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "923e41be-944c-453d-8bc4-cc0df6c1de40",
+      "name": "Yasser Larouci",
+      "wikidataQid": "Q65921425",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "de8a8c68-a3f6-4b2e-9099-e35bc0fdfb6d",
+      "name": "Evanilson",
+      "wikidataQid": "Q69975567",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "fca74456-bedf-4b8b-baf6-e357d8226678",
+      "name": "Mathis Rayan Cherki",
+      "wikidataQid": "Q64736321",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "3144e6d2-3bc2-4170-9af8-592aa10afc89",
+      "name": "Niels Patrick Nkounkou",
+      "wikidataQid": "Q98937031",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "0d0c4023-5942-4d80-9495-13a97b1464ac",
+      "name": "Amad Diallo Traoré",
+      "wikidataQid": "Q72603655",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "fc875d2c-cdf2-42db-b2c9-b18eaeebabde",
+      "name": "Iván Azón",
+      "wikidataQid": "Q101420267",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "c1eeae1d-167f-477a-8b4f-0d291329cae7",
+      "name": "Junior Morau Kadile",
+      "wikidataQid": "Q110385369",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "06bba75c-b0f5-48d9-a097-e55e1b2b19f8",
+      "name": "Christos Tzolis",
+      "wikidataQid": "Q96182871",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "5d25c3be-a456-4a0f-82f5-a64133c86b91",
+      "name": "Hugo González",
+      "wikidataQid": "Q121610335",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "0e218b48-774a-4013-8d50-b4d0922533dd",
+      "name": "Bradley Barcola",
+      "wikidataQid": "Q99670930",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "56088f3c-d9ba-4375-9435-ae96d65fd16f",
+      "name": "Malo Gusto",
+      "wikidataQid": "Q78752401",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "4447fcbd-f557-4ad6-9b59-10f01a8bcfd1",
+      "name": "Germán Valera",
+      "wikidataQid": "Q80968148",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "8cada43c-025c-43a0-8dbe-4b1cd0c0530f",
+      "name": "Maxim De Cuyper",
+      "wikidataQid": "Q85928265",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "1cfc23ce-0a8f-43e6-9246-99b537bd06f8",
+      "name": "Malik Leon Tillman",
+      "wikidataQid": "Q96391665",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "be059631-ddb7-4d94-9ce7-01cbbb6e3ca0",
+      "name": "Yunus Dimoara Musah",
+      "wikidataQid": "Q99304192",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "89b29f79-90ac-4361-a5e7-f5fef80d4db5",
+      "name": "Diego López",
+      "wikidataQid": "Q113648535",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "32c886d7-ef34-4de2-8084-e64050942fa5",
+      "name": "Hugo Ekitike",
+      "wikidataQid": "Q100602910",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "7325b59e-c1dc-4630-8dd2-9f946f729092",
+      "name": "Théo Le Bris",
+      "wikidataQid": "Q108497893",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "b881cb4c-ac21-4790-b3d5-25d8ed0a9b36",
+      "name": "Kevin Schade",
+      "wikidataQid": "Q103845834",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "494ae923-06d2-4b2f-bffc-f37fc60d9c54",
+      "name": "Lucas Calodat",
+      "wikidataQid": "Q109795827",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "648bd082-82ed-4969-9680-7f8bfd49cea9",
+      "name": "Abdessamad Ezzalzouli",
+      "wikidataQid": "Q109327842",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "1954034a-0186-4cbc-a239-4a665f8fea03",
+      "name": "Jan Uwe Thielmann",
+      "wikidataQid": "Q78494289",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "14a0ce19-7f11-44fb-bfe3-267409d7e9f4",
+      "name": "Tyrick Kwon Mitchell",
+      "wikidataQid": "Q96943831",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "184991e2-894a-4c7f-8f72-60ee2c09056f",
+      "name": "Nico Williams",
+      "wikidataQid": "Q104414736",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "f8f9c281-d427-4573-909d-d2f04fdff6cd",
+      "name": "Juan Carlos Arana",
+      "wikidataQid": "Q111756912",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "024ca1a9-4103-4b33-ad3d-0e8bf4cebce3",
+      "name": "Martín Adrián Satriano Costa",
+      "wikidataQid": "Q108198513",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "0bc7bb89-18c6-42e2-b618-d68750951868",
+      "name": "Nikita Solodchenko",
+      "wikidataQid": "Q90312314",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "060da930-683c-47da-bb04-e84b8e12ab9a",
+      "name": "Daniel Svensson",
+      "wikidataQid": "Q106967174",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "de784608-88ba-42e2-b2a4-431217a1ab30",
+      "name": "Kamaldeen Sulemana",
+      "wikidataQid": "Q86269576",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "f41def19-f19d-424b-b6d6-855ed98a74de",
+      "name": "Algot Sebastian Nanasi",
+      "wikidataQid": "Q96480192",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "97ebde5e-1c80-46b4-a9fd-83a65e7ca543",
+      "name": "Alieu Fadera",
+      "wikidataQid": "Q91964356",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "7561a1ec-fc98-44b9-9a13-d3437a59a4e2",
+      "name": "Filippo Terracciano",
+      "wikidataQid": "Q110137666",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "f2f024ab-7d02-4012-a674-6e9c8c031f41",
+      "name": "David Møller Wolfe",
+      "wikidataQid": "Q101095985",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "8a9b72a9-8bf3-434e-9032-00475cf586f1",
+      "name": "Sávio",
+      "wikidataQid": "Q99485542",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "4109afa6-cb4e-40e6-a0a4-27497862f34e",
+      "name": "Mathys Henri Tel",
+      "wikidataQid": "Q108106700",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "ac5478f4-9891-41e0-8c42-9edfb48edee5",
+      "name": "Pablo Pagis",
+      "wikidataQid": "Q115466263",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "50d52d09-a975-4f09-ae5d-5408ea28d1ac",
+      "name": "Oscar Bobb",
+      "wikidataQid": "Q110466658",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "5cf296f6-6a45-4c66-a5ba-1538e1f76883",
+      "name": "Gabriel Vidović",
+      "wikidataQid": "Q110611871",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "9140eae2-1b71-42b7-a361-18983f097c2b",
+      "name": "Junior Mwanga",
+      "wikidataQid": "Q113580461",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "583d73f7-2228-4060-aa1e-6498b7e48840",
+      "name": "Zakaria El Ouahdi",
+      "wikidataQid": "Q108156269",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "bc68d808-7542-4881-a3d9-7a2b30ffc86a",
+      "name": "Alejandro Garnacho Ferreyra",
+      "wikidataQid": "Q111366053",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "bbc5e959-c342-46c5-ace3-3e05a32d92d7",
+      "name": "Romaine Lee Mundle",
+      "wikidataQid": "Q121032499",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "f11a3ddc-773b-4ce4-a35c-d73bfc320956",
+      "name": "Anis Mehmeti",
+      "wikidataQid": "Q101310788",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "1d867e24-16ba-40a9-b2b0-6f45993dcce8",
+      "name": "Matteo Cancellieri",
+      "wikidataQid": "Q108312337",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "2ec6d1ce-9c2c-4dad-939b-c939f2d64315",
+      "name": "Tommaso Baldanzi",
+      "wikidataQid": "Q108188237",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "6f577f63-9c80-4c7d-b413-94762860cdcf",
+      "name": "Isak Steiner Jensen",
+      "wikidataQid": "Q108855242",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "389ba2a1-1a92-4b1c-b56b-dd79cee9b208",
+      "name": "Pablo Marín",
+      "wikidataQid": "Q110652731",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "d4a00807-6f14-4845-8928-5531ceaabc3d",
+      "name": "Noah Mbamba-Muanda",
+      "wikidataQid": "Q105047331",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "c839c2fe-d1bd-4d35-96d2-d39b380c22a2",
+      "name": "Kaine Kesler-Hayden",
+      "wikidataQid": "Q104733764",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "8c3949bd-8763-42e1-bccd-66f4e6722b21",
+      "name": "Issahaku Abdul Fatawu",
+      "wikidataQid": "Q105812639",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "1de7068d-3841-4a56-8d1b-2e7dbe0d6d5e",
+      "name": "Ávaro Leiva",
+      "wikidataQid": "Q116949405",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e12252c1-8144-40da-99b7-8f817cf7afbb",
+      "name": "Federico Redondo Solari",
+      "wikidataQid": "Q113027711",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "9acc0de0-5181-4a78-90f6-917a8d892a5b",
+      "name": "Antonio Eromonsele Nordby Nusa",
+      "wikidataQid": "Q107357509",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "b7690752-8772-4e4c-acd8-7bb28921dbe3",
+      "name": "Kévin Danois",
+      "wikidataQid": "Q117485466",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "57faf514-d8db-4808-89a1-fbdb156aa0d0",
+      "name": "Giuliano Simeone Baldini",
+      "wikidataQid": "Q111672750",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "03cf3838-f95b-4f00-a70f-dcea2a6f0c3c",
+      "name": "Lewis Miley",
+      "wikidataQid": "Q118780753",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "ff2b340c-4103-47a9-8018-42c568394775",
+      "name": "William Cole Campbell",
+      "wikidataQid": "Q116725515",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "ea19ac15-382c-4e32-a9f0-baec41eda7d1",
+      "name": "Unai Gómez",
+      "wikidataQid": "Q115186979",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "4e178847-840d-47b7-b095-74b61f75a8f3",
+      "name": "Warren Zaïre-Emery",
+      "wikidataQid": "Q111280241",
+      "currentPositions": [
+        "DEF"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "DEF",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "e84cb332-6bb8-47e8-b6b7-fda876d3705e",
+      "name": "Anan Khalaili",
+      "wikidataQid": "Q118206666",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "ea287f13-ed08-4f3c-b724-9a3e914a2eed",
+      "name": "Matias Fernandez-Pardo",
+      "wikidataQid": "Q117041294",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "65a65680-63bd-450b-a942-10ed12f547cd",
+      "name": "Elias Jelert Kristensen",
+      "wikidataQid": "Q109742684",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "084b1eb4-9de9-4c17-b587-97923b67d096",
+      "name": "Arthur",
+      "wikidataQid": "Q112182604",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "e178eab3-a6a4-4dee-b30a-f3187e2afbf8",
+      "name": "Hennes Behrens",
+      "wikidataQid": "Q131987115",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    },
+    {
+      "playerId": "89cb1eac-60bb-423b-b11e-7d30301959dc",
+      "name": "George Hemmings",
+      "wikidataQid": "Q137570377",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "9a6bba41-ba24-4e8e-a690-34b7fc91b5f5",
+      "name": "Eli Junior Kroupi",
+      "wikidataQid": "Q117774884",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "1acb8fd3-6ef2-47b1-98d5-51d381f704aa",
+      "name": "Ibrahim Maza",
+      "wikidataQid": "Q118118504",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "f225db81-842a-4ab7-b32d-7200b028258d",
+      "name": "César Palacios",
+      "wikidataQid": "Q117661592",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "1885f0d5-269a-465f-9ddf-b810c05267e6",
+      "name": "Bazoumana Touré",
+      "wikidataQid": "Q125805788",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "600ae8d8-b40f-4283-83a3-85c0373dbcfa",
+      "name": "Assane Diao",
+      "wikidataQid": "Q120509822",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "86e57209-6f2c-41fc-bf1d-11d4173e38a6",
+      "name": "Johan Manzambi",
+      "wikidataQid": "Q125376751",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "5bb808a6-ae54-4f68-96cb-57ccc3c93dd3",
+      "name": "Rayan",
+      "wikidataQid": "Q115937989",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "5a6811c7-0230-49ae-90a6-db6f9641065e",
+      "name": "Zavier Gozo",
+      "wikidataQid": "Q123090257",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "ba48c9cb-c12c-478c-bd20-f4333b2bc261",
+      "name": "Dani Díaz",
+      "wikidataQid": "Q128140004",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "693a69cf-ed54-487f-acef-6e706491c6d3",
+      "name": "Livan Burcu",
+      "wikidataQid": "Q121243464",
+      "currentPositions": [
+        "ATT"
+      ],
+      "wikidataPositions": [
+        "MID"
+      ],
+      "additions": [
+        "MID"
+      ],
+      "proposedPositions": [
+        "ATT",
+        "MID"
+      ]
+    },
+    {
+      "playerId": "56193199-3a58-4a61-9ae2-dff6c0a29399",
+      "name": "Lander Astiazarán",
+      "wikidataQid": "Q135676761",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "87852c12-7ff4-4b7d-ae5d-1007a78ae3e2",
+      "name": "Ibrahim Mbaye",
+      "wikidataQid": "Q129088593",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "29cbf37b-f5df-459e-abb1-582cd704aea3",
+      "name": "Ilyas Azizi",
+      "wikidataQid": "Q134570389",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "ATT"
+      ],
+      "additions": [
+        "ATT"
+      ],
+      "proposedPositions": [
+        "MID",
+        "ATT"
+      ]
+    },
+    {
+      "playerId": "3f3465ed-0397-4661-a0c2-f5ba17640915",
+      "name": "Khalis Merah",
+      "wikidataQid": "Q135514874",
+      "currentPositions": [
+        "MID"
+      ],
+      "wikidataPositions": [
+        "DEF"
+      ],
+      "additions": [
+        "DEF"
+      ],
+      "proposedPositions": [
+        "MID",
+        "DEF"
+      ]
+    }
+  ]
+}

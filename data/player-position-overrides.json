@@ -1,0 +1,50 @@
+[
+  {
+    "provider": "api-football",
+    "externalId": "502",
+    "positions": [
+      {
+        "position": "MID",
+        "isPrimary": true
+      },
+      {
+        "position": "DEF",
+        "isPrimary": false
+      }
+    ],
+    "source": "manual-curation",
+    "note": "Primary MID, secondary DEF"
+  },
+  {
+    "provider": "api-football",
+    "externalId": "978",
+    "positions": [
+      {
+        "position": "ATT",
+        "isPrimary": true
+      },
+      {
+        "position": "MID",
+        "isPrimary": false
+      }
+    ],
+    "source": "manual-curation",
+    "note": "Primary ATT, secondary MID"
+  },
+  {
+    "provider": "api-football",
+    "externalId": "158644",
+    "positions": [
+      {
+        "position": "ATT",
+        "isPrimary": true
+      },
+      {
+        "position": "MID",
+        "isPrimary": false
+      }
+    ],
+    "source": "manual-curation",
+    "note": "Primary ATT, secondary MID based on LM/RM/AM usage"
+  }
+]
