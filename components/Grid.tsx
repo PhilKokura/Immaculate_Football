@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { GridCell } from "./GridCell"
 import { PlayerModal } from "./PlayerModal"
 import { Scoreboard } from "./Scoreboard"
@@ -9,8 +9,12 @@ import {
   getCriterionDisplayName,
   type PlayerWithImage,
 } from "@/lib/gameLogic"
-import { createGameProgress, submitPlayerSelection } from "@/lib/gameSubmission"
-import { createDailyGameState, loadDailyPuzzle, resetDailyGameState, type DailyGameState } from "@/lib/dailyPuzzleClient"
+import { createGameProgress } from "@/lib/gameSubmission"
+import { loadDailyPuzzle } from "@/lib/dailyPuzzleClient"
+import { createDailyGameRun, resetDailyGameRun, submitDailyGameRunGuess, type DailyGameRun } from "@/lib/dailyGameRun"
+import { createClientGameSession } from "@/lib/gameSessionClient"
+import { persistGuessEvent } from "@/lib/guessEventClient"
+import { createRunPersistenceCoordinator } from "@/lib/runPersistenceCoordinator"
 import Image from "next/image"
 import { getCriterionImage } from "@/lib/criterionImages"
 
@@ -35,7 +39,18 @@ function CriterionCard({ criterionKey }: { criterionKey: string }) {
 }
 
 export function Grid() {
-  const [dailyGame, setDailyGame] = useState<DailyGameState | null>(null)
+  const [run, setRun] = useState<DailyGameRun | null>(null)
+  const runRef = useRef<DailyGameRun | null>(null)
+  const persistenceRef = useRef<ReturnType<typeof createRunPersistenceCoordinator> | null>(null)
+  if (!persistenceRef.current) {
+    persistenceRef.current = createRunPersistenceCoordinator({
+      getRun: () => runRef.current,
+      setRun: next => { runRef.current = next; setRun(next) },
+      createSession: createClientGameSession,
+      persistGuess: persistGuessEvent,
+      onFailure: () => console.warn("Guess persistence failed; local play continues."),
+    })
+  }
   const [loadState, setLoadState] = useState<"loading" | "error" | "ready">("loading")
   const [loadError, setLoadError] = useState("")
   const [retryCount, setRetryCount] = useState(0)
@@ -45,12 +60,15 @@ export function Grid() {
     const controller = new AbortController()
     setLoadState("loading")
     setLoadError("")
-    setDailyGame(null)
+    runRef.current = null
+    setRun(null)
 
     void loadDailyPuzzle(controller.signal)
       .then(puzzle => {
         if (controller.signal.aborted) return
-        setDailyGame(createDailyGameState(puzzle))
+        const nextRun = createDailyGameRun(puzzle)
+        runRef.current = nextRun
+        setRun(nextRun)
         setLoadState("ready")
       })
       .catch(error => {
@@ -62,6 +80,25 @@ export function Grid() {
     return () => controller.abort()
   }, [retryCount])
 
+  useEffect(() => {
+    const retryPending = () => {
+      const current = runRef.current
+      if (current?.pendingGuessEvents.length) {
+        void persistenceRef.current?.flush(current.anonymousSessionId)
+      }
+    }
+    const retryWhenVisible = () => {
+      if (document.visibilityState === "visible") retryPending()
+    }
+    window.addEventListener("online", retryPending)
+    document.addEventListener("visibilitychange", retryWhenVisible)
+    return () => {
+      window.removeEventListener("online", retryPending)
+      document.removeEventListener("visibilitychange", retryWhenVisible)
+    }
+  }, [])
+
+  const dailyGame = run?.dailyGame
   const rows = dailyGame?.puzzle.rows.map(criterion => criterion.key) ?? []
   const columns = dailyGame?.puzzle.columns.map(criterion => criterion.key) ?? []
   const {
@@ -75,29 +112,39 @@ export function Grid() {
   const handleCellClick = (cellId: string) => {
     if (remainingAttempts > 0 && !gridState[cellId]) {
       setSelectedCell(cellId)
-      setDailyGame(previous => previous
-        ? { ...previous, progress: { ...previous.progress, lastError: "" } }
-        : previous)
+      const previous = runRef.current
+      if (!previous) return
+      const next = {
+        ...previous,
+        dailyGame: {
+          ...previous.dailyGame,
+          progress: { ...previous.dailyGame.progress, lastError: "" },
+        },
+      }
+      runRef.current = next
+      setRun(next)
     }
   }
 
   const handlePlayerSelect = (player: PlayerWithImage, cellId: string) => {
-    setDailyGame(previous => {
-      if (!previous) return previous
-      const seed = {
-        rows: previous.puzzle.rows.map(criterion => criterion.key),
-        cols: previous.puzzle.columns.map(criterion => criterion.key),
-      }
-      return {
-        ...previous,
-        progress: submitPlayerSelection(previous.progress, seed, player, cellId),
-      }
-    })
+    const previous = runRef.current
+    if (!previous) return
+    const result = submitDailyGameRunGuess(previous, player, cellId)
+    runRef.current = result.run
+    setRun(result.run)
     setSelectedCell(null)
+
+    if (result.attemptConsumed) {
+      void persistenceRef.current?.flush(result.run.anonymousSessionId)
+    }
   }
 
   const handleReset = () => {
-    setDailyGame(previous => previous ? resetDailyGameState(previous) : previous)
+    const previous = runRef.current
+    if (!previous) return
+    const next = resetDailyGameRun(previous)
+    runRef.current = next
+    setRun(next)
     setSelectedCell(null)
   }
 

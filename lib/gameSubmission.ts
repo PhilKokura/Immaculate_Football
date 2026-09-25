@@ -1,3 +1,4 @@
+import { MAX_GAME_GUESSES } from "./gameRules"
 import {
   validatePlayerSelection,
   type PlayerWithImage,
@@ -19,7 +20,7 @@ export function createGameProgress(): GameProgress {
     gridState: {},
     guesses: 0,
     correctAnswers: 0,
-    remainingAttempts: 9,
+    remainingAttempts: MAX_GAME_GUESSES,
     usedPlayers: new Set(),
     lastError: "",
   }
