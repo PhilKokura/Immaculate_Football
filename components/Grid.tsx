@@ -49,6 +49,7 @@ export function Grid() {
     guesses,
     correctAnswers,
     remainingAttempts,
+    usedPlayers,
     lastError,
   } = progress
   const [selectedCell, setSelectedCell] = useState<string | null>(null)
@@ -101,6 +102,7 @@ export function Grid() {
         guesses,
         correctAnswers,
         remainingAttempts,
+
       )
     : {
         averageRarity: 0,
@@ -199,6 +201,7 @@ export function Grid() {
         onPlayerSelect={player =>
           selectedCell && handlePlayerSelect(player, selectedCell)
         }
+        usedPlayers={usedPlayers}
         cellId={selectedCell}
         rowCriteria={
           selectedCell &&
@@ -220,5 +223,7 @@ export function Grid() {
     </div>
   )
 }
+
+
 
 
