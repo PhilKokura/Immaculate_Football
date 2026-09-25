@@ -6,14 +6,11 @@ import { PlayerModal } from "./PlayerModal"
 import { Scoreboard } from "./Scoreboard"
 import {
   calculateGameStats,
-  generateGridFromSeed,
   getCriterionDisplayName,
-  getValidatedRandomSeed,
   type PlayerWithImage,
-  type Seed,
-  type SeedValidationResult,
 } from "@/lib/gameLogic"
 import { createGameProgress, submitPlayerSelection } from "@/lib/gameSubmission"
+import { createDailyGameState, loadDailyPuzzle, resetDailyGameState, type DailyGameState } from "@/lib/dailyPuzzleClient"
 import Image from "next/image"
 import { getCriterionImage } from "@/lib/criterionImages"
 
@@ -38,12 +35,35 @@ function CriterionCard({ criterionKey }: { criterionKey: string }) {
 }
 
 export function Grid() {
-  const [currentSeed, setCurrentSeed] = useState<Seed | null>(null)
-  const [seedValidation, setSeedValidation] = useState<SeedValidationResult | null>(null)
-  const [rows, setRows] = useState<string[]>([])
-  const [columns, setColumns] = useState<string[]>([])
+  const [dailyGame, setDailyGame] = useState<DailyGameState | null>(null)
+  const [loadState, setLoadState] = useState<"loading" | "error" | "ready">("loading")
+  const [loadError, setLoadError] = useState("")
+  const [retryCount, setRetryCount] = useState(0)
+  const [selectedCell, setSelectedCell] = useState<string | null>(null)
 
-  const [progress, setProgress] = useState(createGameProgress)
+  useEffect(() => {
+    const controller = new AbortController()
+    setLoadState("loading")
+    setLoadError("")
+    setDailyGame(null)
+
+    void loadDailyPuzzle(controller.signal)
+      .then(puzzle => {
+        if (controller.signal.aborted) return
+        setDailyGame(createDailyGameState(puzzle))
+        setLoadState("ready")
+      })
+      .catch(error => {
+        if (controller.signal.aborted) return
+        setLoadError(error instanceof Error ? error.message : "Could not load the Daily Puzzle. Please retry.")
+        setLoadState("error")
+      })
+
+    return () => controller.abort()
+  }, [retryCount])
+
+  const rows = dailyGame?.puzzle.rows.map(criterion => criterion.key) ?? []
+  const columns = dailyGame?.puzzle.columns.map(criterion => criterion.key) ?? []
   const {
     gridState,
     guesses,
@@ -51,73 +71,64 @@ export function Grid() {
     remainingAttempts,
     usedPlayers,
     lastError,
-  } = progress
-  const [selectedCell, setSelectedCell] = useState<string | null>(null)
-
-  useEffect(() => {
-    const { seed, validation } = getValidatedRandomSeed()
-    const gridConfig = generateGridFromSeed(seed)
-    setCurrentSeed(seed)
-    setSeedValidation(validation)
-    setRows(gridConfig.rows)
-    setColumns(gridConfig.columns)
-  }, [])
-
+  } = dailyGame?.progress ?? createGameProgress()
   const handleCellClick = (cellId: string) => {
     if (remainingAttempts > 0 && !gridState[cellId]) {
       setSelectedCell(cellId)
-      setProgress(prev => ({ ...prev, lastError: "" }))
+      setDailyGame(previous => previous
+        ? { ...previous, progress: { ...previous.progress, lastError: "" } }
+        : previous)
     }
   }
 
-  const handlePlayerSelect = (
-    player: PlayerWithImage,
-    cellId: string,
-  ) => {
-    setProgress(prev =>
-      submitPlayerSelection(
-        prev,
-        { rows, cols: columns },
-        player,
-        cellId,
-      ),
-    )
+  const handlePlayerSelect = (player: PlayerWithImage, cellId: string) => {
+    setDailyGame(previous => {
+      if (!previous) return previous
+      const seed = {
+        rows: previous.puzzle.rows.map(criterion => criterion.key),
+        cols: previous.puzzle.columns.map(criterion => criterion.key),
+      }
+      return {
+        ...previous,
+        progress: submitPlayerSelection(previous.progress, seed, player, cellId),
+      }
+    })
     setSelectedCell(null)
   }
 
   const handleReset = () => {
-    const { seed, validation } = getValidatedRandomSeed()
-    const gridConfig = generateGridFromSeed(seed)
-    setCurrentSeed(seed)
-    setSeedValidation(validation)
-    setRows(gridConfig.rows)
-    setColumns(gridConfig.columns)
-    setProgress(createGameProgress())
+    setDailyGame(previous => previous ? resetDailyGameState(previous) : previous)
     setSelectedCell(null)
   }
 
-  const gameStats = gridState
-    ? calculateGameStats(
-        gridState,
-        guesses,
-        correctAnswers,
-        remainingAttempts,
-
-      )
-    : {
-        averageRarity: 0,
-        completionPercentage: 0,
-        accuracy: 0,
-        isGameCompleted: false,
-        isGameOver: false,
-        isGameActive: true,
-        correctPlayers: [],
-      }
-
-  if (!rows || !columns || rows.length === 0 || columns.length === 0) {
-    return <div className="py-20 text-center text-slate-300">Loading grid...</div>
+  const gameStats = calculateGameStats(
+    gridState,
+    guesses,
+    correctAnswers,
+    remainingAttempts,
+  )
+  if (loadState === "loading") {
+    return <div role="status" className="py-16 text-center text-sm text-slate-300">Loading Daily Puzzle...</div>
   }
 
+  if (loadState === "error" || !dailyGame) {
+    return (
+      <div role="alert" className="mx-auto max-w-lg rounded-xl border border-red-400/30 bg-red-400/10 p-6 text-center">
+        <p className="text-sm text-red-200">{loadError || "Daily Puzzle is unavailable. Please retry."}</p>
+        <button
+          type="button"
+          onClick={() => setRetryCount(count => count + 1)}
+          className="mt-4 rounded-lg border border-sky-400/40 bg-sky-400/10 px-4 py-2 text-sm font-semibold text-sky-200 hover:bg-sky-400/20"
+        >
+          Retry
+        </button>
+      </div>
+    )
+  }
+
+  if (rows.length !== 3 || columns.length !== 3) {
+    return <div role="alert" className="py-12 text-center text-red-200">Daily Puzzle criteria are unavailable.</div>
+  }
   return (
     <div className="footgrid-game">
       <div className="footgrid-toolbar flex w-full flex-wrap items-center justify-between gap-3 px-1">
@@ -130,22 +141,9 @@ export function Grid() {
           onClick={handleReset}
           className="rounded-lg border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-sm font-semibold text-sky-200 transition-colors hover:border-sky-400/60 hover:bg-sky-400/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400"
         >
-          New Game
+          Reset Game
         </button>
       </div>
-
-      {seedValidation && !seedValidation.isValid && (
-        <div className="mx-auto max-w-[850px] rounded-lg border border-amber-400/30 bg-amber-400/10 p-3">
-          <p className="text-center text-sm font-medium text-amber-200">
-            ⚠️ Grid has limited solutions (min: {seedValidation.minPlayersPerCell} players per cell)
-          </p>
-          {seedValidation.invalidCells.length > 0 && (
-            <p className="mt-1 text-center text-xs text-amber-300">
-              Challenging cells: {seedValidation.invalidCells.join(", ")}
-            </p>
-          )}
-        </div>
-      )}
 
       {lastError && (
         <div className="mx-auto max-w-[850px] rounded-lg border border-red-400/30 bg-red-400/10 p-3">
@@ -223,6 +221,7 @@ export function Grid() {
     </div>
   )
 }
+
 
 
 

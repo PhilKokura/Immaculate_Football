@@ -1,4 +1,5 @@
 import assert from "node:assert/strict"
+import { runtimeCriterion } from "./runtimeCriterion"
 import { test } from "node:test"
 import {
   createGameProgress,
@@ -10,9 +11,13 @@ import type {
   Seed,
 } from "../lib/gameLogic"
 
+const bayern = runtimeCriterion("club", "Bayern München")
+const serieA = runtimeCriterion("league", "Serie A")
+const premierLeague = runtimeCriterion("league", "Premier League")
+
 const seed: Seed = {
-  rows: ["nation:Brazil", "nation:Spain", "club:157"],
-  cols: ["league:135", "league:39", "position:ATT"],
+  rows: ["nation:Brazil", "nation:Spain", bayern.key],
+  cols: [serieA.key, premierLeague.key, "position:ATT"],
 }
 
 function makePlayer(
@@ -25,13 +30,13 @@ function makePlayer(
     searchNames: ["Player"],
     image: null,
     birthDate: null,
-    clubs: ["157"],
+    clubs: [bayern.value],
     clubNames: ["Bayern München"],
-    leagues: ["135", "39"],
+    leagues: [serieA.value, premierLeague.value],
     nation: "Brazil",
     rarity: 0.1,
     positions: ["ATT"],
-    currentClubs: [{ id: "157", name: "Bayern München" }],
+    currentClubs: [{ id: bayern.value, name: "Bayern München" }],
     currentClubAmbiguous: false,
     ...overrides,
   }

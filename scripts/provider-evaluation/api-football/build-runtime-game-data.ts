@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs"
 import { dirname, join, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
+import { canonicalNationAliases, canonicalizeRuntimeNation, createNationFlagResolver, nationCountryCodes, verifiedMissingCountryFlags } from "./runtime-nations"
 
 type Row = Record<string, unknown>
 
@@ -50,53 +51,6 @@ const POSITION_LABELS: Record<PositionCode, string> = {
   DEF: "Defender",
   MID: "Midfielder",
   ATT: "Attacker",
-}
-
-// These aliases change the runtime nation used for eligibility and criteria.
-const canonicalNationAliases: Record<string, string> = {
-  "Czech Republic": "Czechia",
-  Turkey: "Türkiye",
-}
-
-// Country codes resolve flags only; they do not affect player nationality.
-const nationCountryCodes: Record<string, string> = {
-  "Bosnia and Herzegovina": "BA",
-  "Burkina Faso": "BF",
-  "Côte d'Ivoire": "CI",
-  "Cape Verde": "CV",
-  "Central African Republic": "CF",
-  "China PR": "CN",
-  Comoros: "KM",
-  Congo: "CG",
-  "Congo DR": "CD",
-  "Costa Rica": "CR",
-  Czechia: "CZ",
-  "Dominican Republic": "DO",
-  "Equatorial Guinea": "GQ",
-  "Guinea-Bissau": "GW",
-  "Korea Republic": "KR",
-  Mozambique: "MZ",
-  "New Zealand": "NZ",
-  Niger: "NE",
-  "North Macedonia": "MK",
-  "Northern Ireland": "GB-NIR",
-  "Republic of Ireland": "IE",
-  "Saudi Arabia": "SA",
-  "Sierra Leone": "SL",
-  Türkiye: "TR",
-}
-
-// These eight CDN assets returned 200 image/svg+xml in one development check.
-// Runtime builds use this fixed list and never make network requests.
-const verifiedMissingCountryFlags: Record<string, string> = {
-  "Cape Verde": "https://media.api-sports.io/flags/cv.svg",
-  "Central African Republic": "https://media.api-sports.io/flags/cf.svg",
-  Comoros: "https://media.api-sports.io/flags/km.svg",
-  "Equatorial Guinea": "https://media.api-sports.io/flags/gq.svg",
-  "Guinea-Bissau": "https://media.api-sports.io/flags/gw.svg",
-  Mozambique: "https://media.api-sports.io/flags/mz.svg",
-  Niger: "https://media.api-sports.io/flags/ne.svg",
-  "Sierra Leone": "https://media.api-sports.io/flags/sl.svg",
 }
 
 const object = (value: unknown): Row | null =>
@@ -193,28 +147,13 @@ const countriesPath = join(inputDir, "raw", "countries", "countries.json")
 if (!existsSync(countriesPath)) throw new Error("Countries cache is missing; run import-countries.ts first")
 const countriesEnvelope = object(JSON.parse(readFileSync(countriesPath, "utf8")) as unknown)
 if (!Array.isArray(countriesEnvelope?.response)) throw new Error("Countries cache response is malformed")
-const countryFlagsByName = new Map<string, { code: string | null; flag: string }>()
-const countryFlagsByCode = new Map<string, string>()
-for (const raw of countriesEnvelope.response) {
-  const country = object(raw)
-  if (!country || typeof country.name !== "string") continue
-  const flag = text(country.flag)
-  const code = text(country.code)
-  if (flag) {
-    countryFlagsByName.set(country.name, { code, flag })
-    if (code) countryFlagsByCode.set(code, flag)
-  }
-}
-
-function nationFlag(nation: string): string | undefined {
-  const expectedCode = nationCountryCodes[nation]
-  const exact = countryFlagsByName.get(nation)
-  // The cache reverses the Congo names, so an exact name is usable only if
-  // its code agrees with a confirmed mapping when one exists.
-  if (exact && (!expectedCode || exact.code === expectedCode)) return exact.flag
-  return (expectedCode ? countryFlagsByCode.get(expectedCode) : undefined) ??
-    verifiedMissingCountryFlags[nation]
-}
+const nationFlag = createNationFlagResolver(
+  countriesEnvelope.response.flatMap(raw => {
+    const country = object(raw)
+    const name = text(country?.name)
+    return name ? [{ name, code: text(country?.code), flag: text(country?.flag) }] : []
+  }),
+)
 
 const currentLeagueByTeamId = new Map<string, string>()
 for (const rawTeam of currentTeams) {
@@ -269,7 +208,7 @@ for (const rawPlayer of finalPlayers) {
   const nations = stringArray(
     criteria.nations,
     `player ${playerExternalId} nation criteria`,
-  ).map(nation => canonicalNationAliases[nation] ?? nation)
+  ).map(canonicalizeRuntimeNation)
   const positions = positionArray(
     criteria.positions,
     `player ${playerExternalId} position criteria`,

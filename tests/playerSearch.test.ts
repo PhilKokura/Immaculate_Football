@@ -1,8 +1,12 @@
 import assert from "node:assert/strict"
+import { runtimeCriterion } from "./runtimeCriterion"
 import { test } from "node:test"
 import { searchPlayers } from "../components/data/players"
 import { checkCriteria, validatePlayerSelection, type PlayerWithImage } from "../lib/gameLogic"
 import { createGameProgress, submitPlayerSelection } from "../lib/gameSubmission"
+
+const serieA = runtimeCriterion("league", "Serie A")
+const premierLeague = runtimeCriterion("league", "Premier League")
 
 function makePlayer(id: string, name: string, searchNames: string[] = [name]): PlayerWithImage {
   return {
@@ -14,7 +18,7 @@ function makePlayer(id: string, name: string, searchNames: string[] = [name]): P
     birthDate: null,
     clubs: [],
     clubNames: [],
-    leagues: ["135", "39"],
+    leagues: [serieA.value, premierLeague.value],
     nation: "Brazil",
     rarity: 0,
     positions: ["ATT"],
@@ -75,7 +79,7 @@ test("ranking is exact, prefix, token-prefix, then contains with stable ID ties"
 test("selection validity is decided by submission, and duplicate prevention uses player IDs", () => {
   const first = makePlayer("test:first", "Same Name")
   const second = makePlayer("test:second", "Same Name")
-  const seed = { rows: ["nation:Brazil"], cols: ["league:135", "league:39"] }
+  const seed = { rows: ["nation:Brazil"], cols: [serieA.key, premierLeague.key] }
 
   assert.deepEqual(searchPlayers("same name", 20, [first, second]).map(player => player.id), [first.id, second.id])
   assert.equal(validatePlayerSelection(first, seed.rows[0], seed.cols[0]).isValid, true)

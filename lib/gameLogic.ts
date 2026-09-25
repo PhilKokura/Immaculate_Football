@@ -27,8 +27,8 @@ export const POSITIONS = getCriteriaByType("position", MIN_GENERATOR_SUPPORT).ma
 
 // Preferred fallback. If the provider-backed dataset ever makes this invalid,
 // getValidatedFallbackSeed() deterministically searches for another valid grid.
-export const ROWS = ["club:157", "league:39", "nation:Brazil"]
-export const COLUMNS = ["league:135", "position:ATT", "club:541"]
+export const ROWS = [CLUBS[0], LEAGUES[0], NATIONS[0]]
+export const COLUMNS = [LEAGUES[1], POSITIONS[0], CLUBS[1]]
 
 export interface Seed {
   rows: string[]

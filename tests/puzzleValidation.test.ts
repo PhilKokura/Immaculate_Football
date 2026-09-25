@@ -1,4 +1,5 @@
 import assert from "node:assert/strict"
+import { runtimeCriterion } from "./runtimeCriterion"
 import { test } from "node:test"
 import {
   allPlayers,
@@ -22,9 +23,15 @@ import {
   PLAYERS_DATABASE,
 } from "../components/data/players"
 
+const bayern = runtimeCriterion("club", "Bayern München")
+const paris = runtimeCriterion("club", "Paris Saint Germain")
+const serieA = runtimeCriterion("league", "Serie A")
+const premierLeague = runtimeCriterion("league", "Premier League")
+const bundesliga = runtimeCriterion("league", "Bundesliga")
+
 const seed: Seed = {
-  rows: ["nation:Brazil", "nation:Spain", "club:157"],
-  cols: ["league:135", "league:39", "position:ATT"],
+  rows: ["nation:Brazil", "nation:Spain", bayern.key],
+  cols: [serieA.key, premierLeague.key, "position:ATT"],
 }
 
 function player(
@@ -39,15 +46,15 @@ function player(
     searchNames: [name],
     image: null,
     birthDate: null,
-    clubs: ["157"],
+    clubs: [bayern.value],
     clubNames: ["Bayern München"],
-    leagues: ["135", "39"],
+    leagues: [serieA.value, premierLeague.value],
     nation,
     rarity: 0.1,
     positions: ["ATT"],
     currentClubs: [
       {
-        id: "157",
+        id: bayern.value,
         name: "Bayern München",
       },
     ],
@@ -120,8 +127,8 @@ test("rejects Position × Position pairings", () => {
     ],
     cols: [
       "position:ATT",
-      "league:39",
-      "club:541",
+      premierLeague.key,
+      paris.key,
     ],
   }
 
@@ -168,12 +175,12 @@ test("rejects Position × Position pairings", () => {
 test("rejects Nation × Nation pairings", () => {
   const puzzle: Seed = {
     rows: [
-      "club:157",
-      "league:39",
+      bayern.key,
+      premierLeague.key,
       "nation:Brazil",
     ],
     cols: [
-      "league:135",
+      serieA.key,
       "position:ATT",
       "nation:Germany",
     ],
@@ -194,7 +201,7 @@ test("preserves forbidden pairing rules in both orientations", () => {
   const invalidPairs = [
     ["nation:Brazil", "nation:Germany"],
     ["position:MID", "position:ATT"],
-    ["club:157", "league:78"],
+    [bayern.key, bundesliga.key],
   ] as const
 
   for (const [a, b] of invalidPairs) {
@@ -220,8 +227,8 @@ test("preserves forbidden pairing rules in both orientations", () => {
 
   assert.equal(
     checkInvalidPairing(
-      "club:157",
-      "league:135",
+      bayern.key,
+      serieA.key,
     ).isInvalid,
     false,
   )
@@ -262,23 +269,23 @@ test("rejects repeated and unsupported criteria", () => {
       rows: [
         "nation:Brazil",
         "nation:Brazil",
-        "club:157",
+        bayern.key,
       ],
     },
     {
       ...seed,
       cols: [
-        "league:135",
-        "league:39",
-        "club:157",
+        serieA.key,
+        premierLeague.key,
+        bayern.key,
       ],
     },
     {
       ...seed,
       cols: [
-        "league:135",
-        "league:39",
-        "club:999999999",
+        serieA.key,
+        premierLeague.key,
+        "club:unsupported",
       ],
     },
   ]) {
@@ -587,8 +594,8 @@ test("an invalid preferred fallback is replaced by a validated deterministic fal
 
 test("criteria lookup uses canonical criterion keys", () => {
   assert.deepEqual(
-    getPlayersByCriteria("club:157"),
-    PLAYERS_DATABASE.filter(candidate => checkCriteria(candidate, "club:157")),
+    getPlayersByCriteria(bayern.key),
+    PLAYERS_DATABASE.filter(candidate => checkCriteria(candidate, bayern.key)),
   )
 })
 
