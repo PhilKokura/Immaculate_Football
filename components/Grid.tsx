@@ -8,8 +8,6 @@ import {
   calculateGameStats,
   generateGridFromSeed,
   getCriterionDisplayName,
-  getCriterionType,
-  getCriterionValue,
   getValidatedRandomSeed,
   type PlayerWithImage,
   type Seed,
@@ -17,36 +15,14 @@ import {
 } from "@/lib/gameLogic"
 import { createGameProgress, submitPlayerSelection } from "@/lib/gameSubmission"
 import Image from "next/image"
-import { getNationFlagPath } from "@/lib/nationFlags"
-import { getPositionIconPath } from "@/lib/positionIcons"
-import { getLeagueIcon } from "@/lib/leagueIcons"
-import { getClubIcon } from "@/lib/clubIcons"
-import { getCriterion } from "@/components/data/gameData"
+import { getCriterionImage } from "@/lib/criterionImages"
 
 export interface GridState {
   [key: string]: PlayerWithImage | null
 }
 
-const getConstraintImage = (criterionKey: string): string | null => {
-  const runtimeImage = getCriterion(criterionKey)?.image
-  if (runtimeImage) return runtimeImage
-
-  const type = getCriterionType(criterionKey)
-  const value = getCriterionValue(criterionKey)
-  const label = getCriterionDisplayName(criterionKey)
-
-  if (!type || !value) return null
-
-  if (type === "nation") return getNationFlagPath(label)
-  if (type === "position") return getPositionIconPath(value)
-  if (type === "league") return getLeagueIcon(label)
-  if (type === "club") return getClubIcon(label)
-
-  return null
-}
-
 function CriterionCard({ criterionKey }: { criterionKey: string }) {
-  const image = getConstraintImage(criterionKey)
+  const image = getCriterionImage(criterionKey)
   const label = getCriterionDisplayName(criterionKey)
 
   return (
@@ -73,7 +49,6 @@ export function Grid() {
     guesses,
     correctAnswers,
     remainingAttempts,
-    usedPlayers,
     lastError,
   } = progress
   const [selectedCell, setSelectedCell] = useState<string | null>(null)
@@ -224,7 +199,6 @@ export function Grid() {
         onPlayerSelect={player =>
           selectedCell && handlePlayerSelect(player, selectedCell)
         }
-        usedPlayers={usedPlayers}
         cellId={selectedCell}
         rowCriteria={
           selectedCell &&
@@ -246,3 +220,5 @@ export function Grid() {
     </div>
   )
 }
+
+

@@ -1,6 +1,7 @@
 "use client"
 
-import { useState, useEffect, useMemo } from "react"
+import { useEffect, useMemo, useState } from "react"
+import Image from "next/image"
 import {
   Dialog,
   DialogContent,
@@ -9,21 +10,16 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Search, Info } from "lucide-react"
+import { Search } from "lucide-react"
 import type { PlayerWithImage } from "@/lib/gameLogic"
-import {
-  getCellHint,
-  getCriterionDisplayName,
-  validatePlayerSelection,
-} from "@/lib/gameLogic"
-import { searchPlayers } from "@/components/data/players"
+import { getCriterionDisplayName } from "@/lib/gameLogic"
+import { getCriterionImage } from "@/lib/criterionImages"
+import { normalizePlayerSearchText, searchPlayers } from "@/components/data/players"
 
 interface PlayerModalProps {
   isOpen: boolean
   onClose: () => void
   onPlayerSelect: (player: PlayerWithImage) => void
-  usedPlayers: Set<string>
   cellId: string | null
   rowCriteria: string
   colCriteria: string
@@ -33,175 +29,116 @@ export function PlayerModal({
   isOpen,
   onClose,
   onPlayerSelect,
-  usedPlayers,
   rowCriteria,
   colCriteria,
 }: PlayerModalProps) {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedPlayer, setSelectedPlayer] = useState<PlayerWithImage | null>(null)
-  const [error, setError] = useState("")
 
   useEffect(() => {
     if (isOpen) {
       setSearchTerm("")
       setSelectedPlayer(null)
-      setError("")
     }
   }, [isOpen])
 
-  const filteredPlayers = useMemo(() => {
-    if (searchTerm.length < 3) return []
-    return searchPlayers(
-      searchTerm,
-      usedPlayers,
-      8,
-      rowCriteria,
-      colCriteria,
-    )
-  }, [searchTerm, usedPlayers, rowCriteria, colCriteria])
-
-  const handlePlayerClick = (player: PlayerWithImage) => {
-    setSelectedPlayer(player)
-
-    const validation = validatePlayerSelection(
-      player,
-      rowCriteria,
-      colCriteria,
-    )
-
-    if (!validation.isValid) {
-      setError(validation.error || "Invalid selection")
-    } else if (usedPlayers.has(player.id)) {
-      setError(`${player.name} has already been used in the grid`)
-    } else {
-      setError("")
-    }
-  }
+  const normalizedQuery = normalizePlayerSearchText(searchTerm)
+  const results = useMemo(() => searchPlayers(searchTerm, 20), [searchTerm])
+  const rowLabel = getCriterionDisplayName(rowCriteria)
+  const colLabel = getCriterionDisplayName(colCriteria)
+  const rowImage = getCriterionImage(rowCriteria)
+  const colImage = getCriterionImage(colCriteria)
 
   const handleConfirmSelection = () => {
     if (!selectedPlayer) return
-
-    const validation = validatePlayerSelection(
-      selectedPlayer,
-      rowCriteria,
-      colCriteria,
-    )
-
-    if (validation.isValid && !usedPlayers.has(selectedPlayer.id)) {
-      onPlayerSelect(selectedPlayer)
-      onClose()
-    }
+    onPlayerSelect(selectedPlayer)
+    onClose()
   }
 
-  const cellHint = getCellHint(rowCriteria, colCriteria)
-  const rowLabel = getCriterionDisplayName(rowCriteria)
-  const colLabel = getCriterionDisplayName(colCriteria)
-
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-md">
-        <DialogHeader>
-          <DialogTitle className="text-center">
-            Find Player: {rowLabel} × {colLabel}
-          </DialogTitle>
+    <Dialog open={isOpen} onOpenChange={open => { if (!open) onClose() }}>
+      <DialogContent className="dark flex max-h-[90dvh] w-[calc(100%-1.5rem)] max-w-[540px] flex-col gap-0 overflow-hidden rounded-2xl border border-sky-400/40 bg-[#081827] p-0 text-white shadow-[0_24px_80px_rgba(0,5,20,0.7),0_0_35px_rgba(35,137,205,0.13)] sm:max-w-[540px]">
+        <DialogHeader className="gap-2 border-b border-sky-100/10 px-5 pb-4 pt-5 text-left">
+          <DialogTitle className="text-xl font-bold text-white">Find Player</DialogTitle>
+          <div className="flex min-w-0 items-center gap-2 text-sm font-semibold text-slate-200">
+            <span className="flex min-w-0 items-center gap-2">
+              {rowImage && <Image src={rowImage} alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded bg-slate-200/75 object-contain p-0.5" />}
+              <span className="truncate">{rowLabel}</span>
+            </span>
+            <span className="shrink-0 text-sky-400" aria-hidden="true">×</span>
+            <span className="flex min-w-0 items-center gap-2">
+              {colImage && <Image src={colImage} alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded bg-slate-200/75 object-contain p-0.5" />}
+              <span className="truncate">{colLabel}</span>
+            </span>
+          </div>
         </DialogHeader>
 
-        <div className="space-y-4">
-          <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-            <div className="flex items-start space-x-2">
-              <Info className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-              <p className="text-sm text-blue-800 dark:text-blue-200">{cellHint}</p>
-            </div>
-          </div>
-
+        <div className="px-4 pb-3 pt-4 sm:px-5">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-sky-300" aria-hidden="true" />
             <Input
-              placeholder="Type player name (min 3 characters)..."
-              value={searchTerm}
-              onChange={event => setSearchTerm(event.target.value)}
-              className="pl-10"
               autoFocus
+              aria-label="Search player"
+              placeholder="Search player..."
+              value={searchTerm}
+              onChange={event => {
+                setSearchTerm(event.target.value)
+                setSelectedPlayer(null)
+              }}
+              className="h-11 border-sky-400/35 bg-slate-900/80 pl-10 text-white placeholder:text-slate-500 focus-visible:border-sky-400 focus-visible:ring-sky-400/30"
             />
           </div>
+        </div>
 
-          {searchTerm.length >= 3 ? (
-            <div className="max-h-64 overflow-y-auto space-y-2">
-              {filteredPlayers.length > 0 ? (
-                filteredPlayers.map(player => (
-                  <Card
-                    key={player.id}
-                    className={`p-3 cursor-pointer transition-all hover:shadow-md ${
-                      selectedPlayer?.id === player.id
-                        ? "ring-2 ring-primary bg-accent"
-                        : "hover:bg-accent"
-                    }`}
-                    onClick={() => handlePlayerClick(player)}
-                  >
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 rounded-full overflow-hidden bg-muted flex-shrink-0">
-                        <img
-                          src={player.image || "/placeholder.svg"}
-                          alt={player.name}
-                          width={48}
-                          height={48}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-
-                      <div className="flex-1 min-w-0">
-                        <p className="font-medium text-foreground truncate">
-                          {player.name}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          {player.nation || "Nationality unknown"}
-                          {player.positions.length > 0
-                            ? ` • ${player.positions.join(", ")}`
-                            : ""}
-                        </p>
-                        <p className="text-xs text-muted-foreground truncate">
-                          {player.currentClubs.length > 0
-                            ? player.currentClubs.map(club => club.name).join(", ")
-                            : player.clubNames.slice(0, 2).join(", ")}
-                        </p>
-                      </div>
-                    </div>
-                  </Card>
-                ))
-              ) : (
-                <p className="text-center text-muted-foreground py-4">
-                  No players found matching &quot;{searchTerm}&quot;
-                </p>
-              )}
-            </div>
+        <div className="min-h-[140px] max-h-[45dvh] overflow-y-auto px-4 pb-3 sm:px-5">
+          {normalizedQuery.length < 2 ? (
+            <p className="py-12 text-center text-sm text-slate-400">
+              {normalizedQuery.length === 0 ? "Search any active player" : "Enter at least 2 characters"}
+            </p>
+          ) : results.length === 0 ? (
+            <p className="py-12 text-center text-sm text-slate-400">No players found</p>
           ) : (
-            <div className="text-center text-muted-foreground py-8">
-              <p>Type at least 3 characters to search for players</p>
+            <div className="space-y-2">
+              {results.map(player => {
+                const selected = selectedPlayer?.id === player.id
+                const currentClub = player.currentClubs.length === 1 ? player.currentClubs[0].name : null
+                return (
+                  <button
+                    key={player.id}
+                    type="button"
+                    aria-pressed={selected}
+                    onClick={() => setSelectedPlayer(player)}
+                    className={`flex w-full items-center gap-3 rounded-xl border p-2.5 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400 ${
+                      selected
+                        ? "border-sky-400 bg-sky-400/15"
+                        : "border-sky-100/10 bg-slate-800/45 hover:border-sky-300/40 hover:bg-slate-800/75"
+                    }`}
+                  >
+                    <span className="h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-slate-700/60">
+                      <img src={player.image || "/placeholder.svg"} alt="" className="h-full w-full object-cover" />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-sm font-semibold text-white" title={player.name}>{player.name}</span>
+                      {currentClub && <span className="block truncate text-xs text-slate-400">{currentClub}</span>}
+                    </span>
+                  </button>
+                )
+              })}
             </div>
           )}
+        </div>
 
-          {error && (
-            <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg">
-              <p className="text-sm text-destructive">{error}</p>
-            </div>
-          )}
-
-          <div className="flex space-x-2 pt-4">
-            <Button
-              variant="outline"
-              onClick={onClose}
-              className="flex-1 bg-transparent"
-            >
-              Cancel
-            </Button>
-            <Button
-              onClick={handleConfirmSelection}
-              disabled={!selectedPlayer || !!error}
-              className="flex-1"
-            >
-              Confirm Selection
-            </Button>
-          </div>
+        <div className="flex gap-2 border-t border-sky-100/10 bg-[#071522] p-4 sm:px-5">
+          <Button variant="outline" onClick={onClose} className="flex-1 border-slate-600 bg-transparent text-slate-200 hover:bg-slate-800 hover:text-white">
+            Cancel
+          </Button>
+          <Button
+            onClick={handleConfirmSelection}
+            disabled={!selectedPlayer}
+            className="flex-1 bg-sky-500 font-semibold text-slate-950 hover:bg-sky-400 disabled:opacity-50"
+          >
+            Confirm Selection
+          </Button>
         </div>
       </DialogContent>
     </Dialog>

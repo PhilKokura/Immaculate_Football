@@ -20,7 +20,6 @@ import {
 import {
   getPlayersByCriteria,
   PLAYERS_DATABASE,
-  searchPlayers,
 } from "../components/data/players"
 
 const seed: Seed = {
@@ -586,38 +585,10 @@ test("an invalid preferred fallback is replaced by a validated deterministic fal
   }
 })
 
-test("search and criteria lookup use canonical criterion keys", () => {
+test("criteria lookup uses canonical criterion keys", () => {
   assert.deepEqual(
     getPlayersByCriteria("club:157"),
-    PLAYERS_DATABASE.filter(
-      candidate =>
-        checkCriteria(
-          candidate,
-          "club:157",
-        ),
-    ),
+    PLAYERS_DATABASE.filter(candidate => checkCriteria(candidate, "club:157")),
   )
-
-  const results = searchPlayers(
-    "",
-    new Set(),
-    8,
-    "nation:Brazil",
-    "position:ATT",
-  )
-
-  assert.ok(
-    results.length > 0,
-  )
-
-  for (const candidate of results) {
-    assert.equal(
-      validatePlayerSelection(
-        candidate,
-        "nation:Brazil",
-        "position:ATT",
-      ).isValid,
-      true,
-    )
-  }
 })
+

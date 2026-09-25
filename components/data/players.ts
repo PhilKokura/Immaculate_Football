@@ -6,63 +6,53 @@ import {
 
 export { PLAYERS_DATABASE }
 
-export function searchPlayers(
-  query: string,
-  usedPlayers: Set<string>,
-  limit = 8,
-  rowCriteria?: string,
-  colCriteria?: string,
-): PlayerWithImage[] {
-  const normalizedQuery = normalizeText(query)
-
-  return PLAYERS_DATABASE
-    .filter(player => {
-      const nameMatches =
-        normalizedQuery.length === 0 ||
-        player.searchNames.some(name =>
-          normalizeText(name).includes(normalizedQuery),
-        )
-
-      if (!nameMatches) return false
-      if (usedPlayers.has(player.id)) return false
-
-      if (rowCriteria && colCriteria) {
-        return (
-          checkCriteria(player, rowCriteria) &&
-          checkCriteria(player, colCriteria)
-        )
-      }
-
-      return true
-    })
-    .sort((a, b) => searchRank(a, normalizedQuery) - searchRank(b, normalizedQuery))
-    .slice(0, limit)
-}
-
-function searchRank(player: PlayerWithImage, normalizedQuery: string): number {
-  const normalizedDisplayName = normalizeText(player.name)
-  if (normalizedDisplayName === normalizedQuery) return 0
-  if (normalizedDisplayName.startsWith(normalizedQuery)) return 1
-  if (normalizedDisplayName.includes(normalizedQuery)) return 2
-
-  if (
-    player.searchNames.some(name =>
-      normalizeText(name).startsWith(normalizedQuery),
-    )
-  ) {
-    return 3
-  }
-
-  return 4
-}
-
-function normalizeText(text: string): string {
+export function normalizePlayerSearchText(text: string): string {
   return text
+    .normalize("NFKD")
+    .replace(/\p{M}/gu, "")
     .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/['’´]/g, "")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
     .replace(/\s+/g, " ")
     .trim()
+}
+
+function searchRank(player: PlayerWithImage, query: string): number {
+  const names = [player.name, ...player.searchNames]
+  let bestRank = Number.POSITIVE_INFINITY
+
+  for (const name of names) {
+    const normalizedName = normalizePlayerSearchText(name)
+    if (normalizedName === query) return 0
+    if (normalizedName.startsWith(query)) bestRank = Math.min(bestRank, 1)
+    else if (normalizedName.split(" ").some(token => token.startsWith(query))) {
+      bestRank = Math.min(bestRank, 2)
+    } else if (normalizedName.includes(query)) bestRank = Math.min(bestRank, 3)
+  }
+
+  return bestRank
+}
+
+/** Search the full active runtime catalog. Cell eligibility is checked only on submission. */
+export function searchPlayers(
+  query: string,
+  limit = 20,
+  players: readonly PlayerWithImage[] = PLAYERS_DATABASE,
+): PlayerWithImage[] {
+  const normalizedQuery = normalizePlayerSearchText(query)
+  if (normalizedQuery.length < 2) return []
+
+  return players
+    .map(player => ({ player, rank: searchRank(player, normalizedQuery) }))
+    .filter(result => Number.isFinite(result.rank))
+    .sort((a, b) =>
+      a.rank - b.rank ||
+      (normalizePlayerSearchText(a.player.name) < normalizePlayerSearchText(b.player.name) ? -1 :
+        normalizePlayerSearchText(a.player.name) > normalizePlayerSearchText(b.player.name) ? 1 : 0) ||
+      (a.player.id < b.player.id ? -1 : a.player.id > b.player.id ? 1 : 0),
+    )
+    .slice(0, limit)
+    .map(result => result.player)
 }
 
 export function getPlayersByCriteria(criteria: string): PlayerWithImage[] {
