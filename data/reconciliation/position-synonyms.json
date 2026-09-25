@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "mappingType": "position-synonym",
+  "evidence": [
+    "Repository football-data audit: representational equivalence only."
+  ],
+  "mappings": {
+    "Attacker": "ATT",
+    "Midfielder": "MID",
+    "Defender": "DEF",
+    "Goalkeeper": "GK"
+  }
+}

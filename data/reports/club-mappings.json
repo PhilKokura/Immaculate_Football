@@ -1,0 +1,408 @@
+[
+  {
+    "raw": "1. FC Heidenheim 1846",
+    "normalized": "1. FC Heidenheim",
+    "mappingType": "club-alias",
+    "occurrences": 35,
+    "records": 35
+  },
+  {
+    "raw": "A. Bilbao",
+    "normalized": "Athletic Club",
+    "mappingType": "club-alias",
+    "occurrences": 32,
+    "records": 32
+  },
+  {
+    "raw": "A. Madrid",
+    "normalized": "Atletico Madrid",
+    "mappingType": "club-alias",
+    "occurrences": 36,
+    "records": 36
+  },
+  {
+    "raw": "Arsenal F.C.",
+    "normalized": "Arsenal",
+    "mappingType": "club-alias",
+    "occurrences": 21,
+    "records": 21
+  },
+  {
+    "raw": "Atalanta B.C.",
+    "normalized": "Atalanta",
+    "mappingType": "club-alias",
+    "occurrences": 28,
+    "records": 28
+  },
+  {
+    "raw": "Athletic Bilbao",
+    "normalized": "Athletic Club",
+    "mappingType": "club-alias",
+    "occurrences": 18,
+    "records": 18
+  },
+  {
+    "raw": "Atlético Madrid",
+    "normalized": "Atletico Madrid",
+    "mappingType": "club-alias",
+    "occurrences": 5,
+    "records": 5
+  },
+  {
+    "raw": "Atlético de Madrid",
+    "normalized": "Atletico Madrid",
+    "mappingType": "club-alias",
+    "occurrences": 197,
+    "records": 197
+  },
+  {
+    "raw": "Auxerre",
+    "normalized": "AJ Auxerre",
+    "mappingType": "club-alias",
+    "occurrences": 6,
+    "records": 6
+  },
+  {
+    "raw": "Barcelona",
+    "normalized": "FC Barcelona",
+    "mappingType": "club-alias",
+    "occurrences": 359,
+    "records": 359
+  },
+  {
+    "raw": "Bayer 04",
+    "normalized": "Bayer 04 Leverkusen",
+    "mappingType": "club-alias",
+    "occurrences": 46,
+    "records": 46
+  },
+  {
+    "raw": "Bologna F.C. 1909",
+    "normalized": "Bologna",
+    "mappingType": "club-alias",
+    "occurrences": 19,
+    "records": 19
+  },
+  {
+    "raw": "Borussia M'gladbach",
+    "normalized": "Borussia Mönchengladbach",
+    "mappingType": "club-alias",
+    "occurrences": 48,
+    "records": 48
+  },
+  {
+    "raw": "Bournemouth",
+    "normalized": "AFC Bournemouth",
+    "mappingType": "club-alias",
+    "occurrences": 40,
+    "records": 40
+  },
+  {
+    "raw": "Cagliari Calcio",
+    "normalized": "Cagliari",
+    "mappingType": "club-alias",
+    "occurrences": 24,
+    "records": 24
+  },
+  {
+    "raw": "Celta de Vigo",
+    "normalized": "RC Celta de Vigo",
+    "mappingType": "club-alias",
+    "occurrences": 17,
+    "records": 17
+  },
+  {
+    "raw": "Chelsea F.C.",
+    "normalized": "Chelsea",
+    "mappingType": "club-alias",
+    "occurrences": 72,
+    "records": 72
+  },
+  {
+    "raw": "Espanyol",
+    "normalized": "RCD Espanyol de Barcelona",
+    "mappingType": "club-alias",
+    "occurrences": 32,
+    "records": 32
+  },
+  {
+    "raw": "FC Bayern Munich",
+    "normalized": "Bayern Munich",
+    "mappingType": "club-alias",
+    "occurrences": 107,
+    "records": 107
+  },
+  {
+    "raw": "Getafe CF",
+    "normalized": "Getafe",
+    "mappingType": "club-alias",
+    "occurrences": 13,
+    "records": 13
+  },
+  {
+    "raw": "Girona FC",
+    "normalized": "Girona",
+    "mappingType": "club-alias",
+    "occurrences": 21,
+    "records": 21
+  },
+  {
+    "raw": "Heidenheim",
+    "normalized": "1. FC Heidenheim",
+    "mappingType": "club-alias",
+    "occurrences": 44,
+    "records": 44
+  },
+  {
+    "raw": "Hellas Verona F.C.",
+    "normalized": "Hellas Verona",
+    "mappingType": "club-alias",
+    "occurrences": 20,
+    "records": 20
+  },
+  {
+    "raw": "Hoffenheim",
+    "normalized": "TSG Hoffenheim",
+    "mappingType": "club-alias",
+    "occurrences": 23,
+    "records": 23
+  },
+  {
+    "raw": "Inter",
+    "normalized": "Inter Milan",
+    "mappingType": "club-alias",
+    "occurrences": 30,
+    "records": 30
+  },
+  {
+    "raw": "Juventus F.C.",
+    "normalized": "Juventus",
+    "mappingType": "club-alias",
+    "occurrences": 82,
+    "records": 82
+  },
+  {
+    "raw": "LOSC",
+    "normalized": "Lille OSC",
+    "mappingType": "club-alias",
+    "occurrences": 35,
+    "records": 35
+  },
+  {
+    "raw": "Lens",
+    "normalized": "RC Lens",
+    "mappingType": "club-alias",
+    "occurrences": 19,
+    "records": 19
+  },
+  {
+    "raw": "Liverpool F.C.",
+    "normalized": "Liverpool",
+    "mappingType": "club-alias",
+    "occurrences": 67,
+    "records": 67
+  },
+  {
+    "raw": "Mainz 05",
+    "normalized": "1. FSV Mainz 05",
+    "mappingType": "club-alias",
+    "occurrences": 57,
+    "records": 57
+  },
+  {
+    "raw": "Manchester City F.C.",
+    "normalized": "Manchester City",
+    "mappingType": "club-alias",
+    "occurrences": 70,
+    "records": 70
+  },
+  {
+    "raw": "Manchester United F.C.",
+    "normalized": "Manchester United",
+    "mappingType": "club-alias",
+    "occurrences": 37,
+    "records": 37
+  },
+  {
+    "raw": "Metz",
+    "normalized": "FC Metz",
+    "mappingType": "club-alias",
+    "occurrences": 8,
+    "records": 8
+  },
+  {
+    "raw": "Milan",
+    "normalized": "AC Milan",
+    "mappingType": "club-alias",
+    "occurrences": 35,
+    "records": 35
+  },
+  {
+    "raw": "Nantes",
+    "normalized": "FC Nantes",
+    "mappingType": "club-alias",
+    "occurrences": 15,
+    "records": 15
+  },
+  {
+    "raw": "Nice",
+    "normalized": "OGC Nice",
+    "mappingType": "club-alias",
+    "occurrences": 27,
+    "records": 27
+  },
+  {
+    "raw": "OL",
+    "normalized": "Olympique Lyonnais",
+    "mappingType": "club-alias",
+    "occurrences": 30,
+    "records": 30
+  },
+  {
+    "raw": "OM",
+    "normalized": "Olympique de Marseille",
+    "mappingType": "club-alias",
+    "occurrences": 44,
+    "records": 44
+  },
+  {
+    "raw": "Real Betis Balompié",
+    "normalized": "Real Betis",
+    "mappingType": "club-alias",
+    "occurrences": 52,
+    "records": 52
+  },
+  {
+    "raw": "Real Madrid CF",
+    "normalized": "Real Madrid",
+    "mappingType": "club-alias",
+    "occurrences": 241,
+    "records": 241
+  },
+  {
+    "raw": "Roma",
+    "normalized": "AS Roma",
+    "mappingType": "club-alias",
+    "occurrences": 91,
+    "records": 91
+  },
+  {
+    "raw": "SV Werder",
+    "normalized": "Werder Bremen",
+    "mappingType": "club-alias",
+    "occurrences": 55,
+    "records": 55
+  },
+  {
+    "raw": "Sevilla FC",
+    "normalized": "Sevilla",
+    "mappingType": "club-alias",
+    "occurrences": 49,
+    "records": 49
+  },
+  {
+    "raw": "TSG 1899 Hoffenheim",
+    "normalized": "TSG Hoffenheim",
+    "mappingType": "club-alias",
+    "occurrences": 7,
+    "records": 7
+  },
+  {
+    "raw": "Tottenham Hotspur F.C.",
+    "normalized": "Tottenham Hotspur",
+    "mappingType": "club-alias",
+    "occurrences": 63,
+    "records": 63
+  },
+  {
+    "raw": "Udinese Calcio",
+    "normalized": "Udinese",
+    "mappingType": "club-alias",
+    "occurrences": 17,
+    "records": 17
+  },
+  {
+    "raw": "Union Berlin",
+    "normalized": "1. FC Union Berlin",
+    "mappingType": "club-alias",
+    "occurrences": 59,
+    "records": 59
+  },
+  {
+    "raw": "Valencia",
+    "normalized": "Valencia CF",
+    "mappingType": "club-alias",
+    "occurrences": 48,
+    "records": 48
+  },
+  {
+    "raw": "Vallecano",
+    "normalized": "Rayo Vallecano",
+    "mappingType": "club-alias",
+    "occurrences": 23,
+    "records": 23
+  },
+  {
+    "raw": "Villarreal CF",
+    "normalized": "Villarreal",
+    "mappingType": "club-alias",
+    "occurrences": 49,
+    "records": 49
+  },
+  {
+    "raw": "Atlético Pamplona",
+    "normalized": "Osasuna",
+    "mappingType": "fm-license-replacement",
+    "occurrences": 28,
+    "records": 28
+  },
+  {
+    "raw": "Blu-neri",
+    "normalized": "Inter Milan",
+    "mappingType": "fm-license-replacement",
+    "occurrences": 57,
+    "records": 57
+  },
+  {
+    "raw": "Casciavit",
+    "normalized": "AC Milan",
+    "mappingType": "fm-license-replacement",
+    "occurrences": 59,
+    "records": 59
+  },
+  {
+    "raw": "Man UFC",
+    "normalized": "Manchester United",
+    "mappingType": "fm-license-replacement",
+    "occurrences": 46,
+    "records": 46
+  },
+  {
+    "raw": "Parthenope",
+    "normalized": "Napoli",
+    "mappingType": "fm-license-replacement",
+    "occurrences": 58,
+    "records": 58
+  },
+  {
+    "raw": "Real Hispalis",
+    "normalized": "Real Betis",
+    "mappingType": "fm-license-replacement",
+    "occurrences": 35,
+    "records": 35
+  },
+  {
+    "raw": "Real San Sebastián",
+    "normalized": "Real Sociedad",
+    "mappingType": "fm-license-replacement",
+    "occurrences": 33,
+    "records": 33
+  },
+  {
+    "raw": "Salento",
+    "normalized": "Lecce",
+    "mappingType": "fm-license-replacement",
+    "occurrences": 83,
+    "records": 83
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "mappingType": "nation-code-equivalence",
+  "evidence": [
+    "Repository football-data audit: 26 safe code/name equivalences; other codes and jurisdictions remain unchanged."
+  ],
+  "mappings": {
+    "ALG": "Algeria",
+    "AUT": "Austria",
+    "BFA": "Burkina Faso",
+    "BIH": "Bosnia and Herzegovina",
+    "CAN": "Canada",
+    "CIV": "Ivory Coast",
+    "COL": "Colombia",
+    "CZE": "Czech Republic",
+    "EGY": "Egypt",
+    "EQG": "Equatorial Guinea",
+    "GAB": "Gabon",
+    "GRE": "Greece",
+    "GUI": "Guinea",
+    "HUN": "Hungary",
+    "JPN": "Japan",
+    "MLI": "Mali",
+    "POL": "Poland",
+    "SEN": "Senegal",
+    "SRB": "Serbia",
+    "SUI": "Switzerland",
+    "SVK": "Slovakia",
+    "SVN": "Slovenia",
+    "TUN": "Tunisia",
+    "TUR": "Turkey",
+    "URU": "Uruguay",
+    "VEN": "Venezuela"
+  }
+}

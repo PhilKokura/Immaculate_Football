@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "decisions": [
+    {
+      "decisionId": "review-rodri",
+      "sourceHash": "a0b938a62ceb0b3268453c042424bed69e84357d2d6a7ede96a627435e7a7e89",
+      "sourceRefs": [
+        {
+          "index": 1,
+          "name": "Rodri"
+        }
+      ],
+      "status": "unresolved",
+      "flags": [
+        "suspected-identity-collision"
+      ],
+      "notes": "Audit evidence suggests distinct namesakes may be conflated. Review source associations; do not split or reassign clubs automatically.",
+      "evidence": [
+        "https://www.mancity.com/news/first-team/first-team-news/2019/july/manchester-city-rodrigo-12-facts-need-to-know",
+        "https://www.fcbarcelona.com/en/news/1141534/zaragoza-with-seven-ex-fc-barcelona-youth-players/amp"
+      ]
+    },
+    {
+      "decisionId": "review-alisson",
+      "sourceHash": "a0b938a62ceb0b3268453c042424bed69e84357d2d6a7ede96a627435e7a7e89",
+      "sourceRefs": [
+        {
+          "index": 14,
+          "name": "Alisson"
+        }
+      ],
+      "status": "unresolved",
+      "flags": [
+        "suspected-identity-collision"
+      ],
+      "notes": "Goalkeeper/midfielder combination and distinct documented namesakes warrant review; evidence does not assign individual source fields.",
+      "evidence": [
+        "https://www.liverpoolfc.com/teams/mens-team/alisson-becker",
+        "https://www.saopaulofc.net/alisson-renova-com-o-tricolor-ate-2026-2/"
+      ]
+    },
+    {
+      "decisionId": "review-marquinhos",
+      "sourceHash": "a0b938a62ceb0b3268453c042424bed69e84357d2d6a7ede96a627435e7a7e89",
+      "sourceRefs": [
+        {
+          "index": 34,
+          "name": "Marquinhos"
+        }
+      ],
+      "status": "unresolved",
+      "flags": [
+        "suspected-identity-collision"
+      ],
+      "notes": "PSG/Arsenal associations and all four positions warrant namesake review. Do not infer which attributes belong to whom.",
+      "evidence": [
+        "https://en.psg.fr/teams/first-team/squad/marquinhos",
+        "https://www.arsenal.com/news/golden-boy-marquinhos-will-get-more-chances"
+      ]
+    }
+  ]
+}

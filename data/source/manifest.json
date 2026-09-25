@@ -1,0 +1,20 @@
+{
+  "pipelineVersion": 1,
+  "sourcePath": "components/data/clean_players.json",
+  "sourceHash": "a0b938a62ceb0b3268453c042424bed69e84357d2d6a7ede96a627435e7a7e89",
+  "configurationAndCodeHash": "eb681d6c7faf32a7333892148078fc353bc31a4f5d37f024e175ffede069a4e2",
+  "fileHashes": {
+    "data/reconciliation/club-aliases.json": "ac07ae8ef575a1760a91c037f8a89e960715e732b4d7c5f9a92bf5f0d7bd1768",
+    "data/reconciliation/fm-club-replacements.json": "ad11b09814ce3b65c3a412debf879fb9884e19267f389a0590208ac67f946f16",
+    "data/reconciliation/position-synonyms.json": "cd830e89623de985747e0b45636c9738d995dede7a5a9b6da489b1b781e3bd4d",
+    "data/reconciliation/nation-code-aliases.json": "781406bc8187820dcf786457cd5be0a4bdce9c3ea45cd51deb649080a3740e87",
+    "data/reconciliation/club-vocabulary.json": "21be85e195ef1989a3a06ffd5dd50f142be1c0b741e19004fec5deae712ef767",
+    "data/reconciliation/manual-decisions.json": "f5995eee1d17e7812a0ec3f31702b271534777ad07e8c4c5fcce7ec40d7e7cd5",
+    "scripts/data-audit.ts": "79836aeacd432e630d14ceb990653e5b369d8997245dbb2502c5bc4303ded86e",
+    "scripts/reconciliation/config.ts": "23c136d94dc4af6553ba48ae2f255f15d3f6c68d4cd00887b352e2f9adbc32ab",
+    "scripts/reconciliation/model.ts": "2988c4e80aeef4137ea0768e07fd66cddef605a7696116178a18e4aaba94dd87",
+    "scripts/reconciliation/reconcile.ts": "f7a35e7596d3d7b223a89ecb997b7b209df1a2cba2f7e6308e974c2694e5bd3c"
+  },
+  "snapshotPath": "data/source/a0b938a62ceb0b3268453c042424bed69e84357d2d6a7ede96a627435e7a7e89.json",
+  "totalRecords": 8198
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "mappingType": "fm-license-replacement",
+  "evidence": [
+    "Repository football-data audit: eight licensed-name replacements.",
+    "https://www.fmgreece.gr/columns/ck119-downloads/fmgreece-real-names-fix-2024/",
+    "https://www.fmsite.net/articulos/football-manager/licencias-en-el-football-manager-2024-r1078/"
+  ],
+  "mappings": {
+    "Parthenope": "Napoli",
+    "Blu-neri": "Inter Milan",
+    "Casciavit": "AC Milan",
+    "Salento": "Lecce",
+    "Man UFC": "Manchester United",
+    "Real Hispalis": "Real Betis",
+    "Real San Sebastián": "Real Sociedad",
+    "Atlético Pamplona": "Osasuna"
+  }
+}
